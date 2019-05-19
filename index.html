@@ -64,8 +64,7 @@
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис:</p>
         <a href="map.html">
-          <img src="img/map.png" width="300" height="158" alt="Большая Конюшенная, 19">
-          <!-- Здесь по щелчку на карте должен быть переход по ссылке на карту? -->
+          <img src="img/map.png" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная, 19/8, Санкт-Петербург">
         </a>
         <a href="#" class="feedback">Заблудились? Напишите нам</a>
       </section>
@@ -113,6 +112,34 @@
             <span>htmlacademy.ru</span></p>
       </div>
     </footer>
-
+    <section class="modal modal-feedback">
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <form class="feedback-form" method="post" action="#">
+        <!-- У формы может не быть feeldset`а и legend ? -->
+        <ul>
+          <li>
+            <label for="user-name">Ваше имя:</label>
+            <input type="text" id="user-name" name="user-name" placeholder="Имя Фамилия">
+          </li>
+          <li>
+            <label for="email">Ваш e-mail:</label>
+            <input type="email" id="email" name="email" placeholder="email@example.com">
+          </li>
+          <li>
+            <label for="message">Текст письма:</label>
+            <textarea id="message" name="message" rows="5" cols="40">В свободной форме</textarea>
+          </li>
+        </ul>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" aria-label="Закрыть окно сообщения">Закрыть</button>
+    </section>
+    <section class="modal modal-map">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <p>
+        <img src="img/map-popup.png" width="940" height="447" alt="Офис компании по адресу ул. Большая Конюшенная, 19/8, Санкт-Петербург">
+      </p>
+      <button class="modal-close" aria-label="Закрыть карту">Закрыть</button>
+    </section>
   </body>
 </html>

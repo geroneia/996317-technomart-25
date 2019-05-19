@@ -49,13 +49,94 @@
             <li><a href="#">Инструмент</a></li>
             <li class="breadcrumbs-selected"><a>Перфораторы</a></li>
         </ul>
-        <h2>Перфораторы</h2>
-        <!-- Здесь будет блок, сейчас в задании помеченный красным - фильтр по цене и сортировка -->
         <section class="filters">
-            <!-- Тут красным не отмечено, но чекбоксы мы еще не делали. Не поняла, каким образом они будут делаться. Сохранила картинки для двух
-            состояний - отмеченный чекбокс и неотмеченный -->
+            <h2>Фильтр:</h2>
+            <form class="filter" method="get" action="">
+                <fieldset>
+                    <legend>Сортировка</legend>
+                    <!-- Не уверена, что это делается так. Но это же тоже фильтр, и выбрать можно только один вариант, а сами "кружочки"
+                        можно спрятать в css-->
+                    <ul>
+                        <li class="filter-option">
+                            <!-- Здесь у меня возникли затруднения с выбором атрибута name для этих радиокнопок. И я не знаю с помощью чего
+                                делаются красные "стрелочки" вверх и вниз в конце строки с сортировкой -->
+                            <label>
+                                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="price">
+                                По цене
+                            </label>
+                        </li>
+                        <li class="filter-option">
+                            <label>
+                                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="type">
+                                По типу
+                            </label>
+                        </li>
+                        <li class="filter-option">
+                            <label>
+                                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="functional">
+                                По функционалу
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <!-- Здесь будет input type="range" с ценой. Пока видела мало примеров, как такое делается и не понимаю. -->
+                <fieldset>
+                    <legend>Производители:</legend>
+                    <ul>
+                        <li class="filter-option">
+                            <label>
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="bosh" checked>
+                                Bosh
+                            </label>
+                        </li>
+                        <li class="filter-option">
+                            <label>
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="interskol">
+                                Интерскол
+                            </label>
+                        </li>
+                        <li class="filter-option">
+                            <label>
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="makita" checked>
+                                Makita
+                            </label>
+                        </li>
+                        <li class="filter-option">
+                            <label>
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="dewalt">
+                                Dewalt
+                            </label>
+                        </li>
+                        <li class="filter-option">
+                            <label>
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hitachi">
+                                Hitachi
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Питание:</legend>
+                    <ul>
+                        <li class="filter-option">
+                            <label>
+                                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="power-supply" value="battery" checked>
+                                Аккумуляторные
+                            </label>
+                        </li>
+                        <li class="filter-option">
+                            <label>
+                                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="power-supply" value="ac-adapter">
+                                Сетевые
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <button type="submit" class="filter-button button">Показать</button>
+            </form>
         </section>
-        <div class="catalog">
+        <section class="catalog">
+            <h2>Перфораторы</h2>
              <ul class="catalog-list">
                 <li class="catalog-item">
                     <h3>
@@ -209,8 +290,16 @@
                             </p>
                 </li>
             </ul>
-        </div>
-         <!-- Здесь будут два блока, выделенные красным. (.pagination и <article>?) -->
+        </section>
+        <nav class="pagination">
+            <ul>
+                <li class="paginalion-item paginalion-item-current"><a href="#">1</a></li>
+                <li class="paginalion-item"><a href="#">2</a></li>
+                <li class="paginalion-item"><a href="#">3</a></li>
+                <li class="paginalion-item"><a href="#">Следующая</a></li>
+            </ul>
+        </nav>
+         <!-- Здесь будет блок, выделенный красным. (<article>?) -->
     </main>
     <footer>
       <div class="footer-top">
@@ -246,8 +335,6 @@
           <li><a class="social-button" href="#">В контакте</a></li>
           <li><a class="social-button" href="#">Фейсбук</a></li>
           <li><a class="social-button" href="#">Инстаграм</a></li>
-          <!-- я нарезала иконки соцсетей, корзину, поиск, пользователя и т.д., в скринкасте их не подключали, поэтому я тут тоже не делала пока что.
-          Никогда раньше не имела дела с svg - возможно, там что-то удалить можно лишнее в коде картинок, не знаю -->
         </ul>
         <p class="footer-feedback">
             Обратная связь:<br>
@@ -257,6 +344,15 @@
             <span>htmlacademy.ru</span></p>
       </div>
     </footer>
-
+    <div class="modal modal-cart">
+        <!-- Что здесь можно зделать с точки зрения доступности? Такие окна как-то озаглавливаются? Может это section со скрытым заголовком,
+            типа "сообщение? "Оформить заказ" и "Продолжить покупки" - не уверена, что это кнопки, а не ссылки -->
+        <p class="message">
+            Товар добавлен в корзину!
+        </p>
+        <button class="button button-checkout" type="button">Оформить заказ</button>
+        <button class="button modal-close">Продолжить покупки</button>
+        <button class="modal-close" aria-label="Закрыть окно сообщения">Закрыть</button>
+    </div>
   </body>
 </html>
