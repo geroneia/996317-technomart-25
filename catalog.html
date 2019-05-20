@@ -52,33 +52,6 @@
         <section class="filters">
             <h2>Фильтр:</h2>
             <form class="filter" method="get" action="">
-                <fieldset>
-                    <legend>Сортировка</legend>
-                    <!-- Не уверена, что это делается так. Но это же тоже фильтр, и выбрать можно только один вариант, а сами "кружочки"
-                        можно спрятать в css-->
-                    <ul>
-                        <li class="filter-option">
-                            <!-- Здесь у меня возникли затруднения с выбором атрибута name для этих радиокнопок. И я не знаю с помощью чего
-                                делаются красные "стрелочки" вверх и вниз в конце строки с сортировкой -->
-                            <label>
-                                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="price">
-                                По цене
-                            </label>
-                        </li>
-                        <li class="filter-option">
-                            <label>
-                                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="type">
-                                По типу
-                            </label>
-                        </li>
-                        <li class="filter-option">
-                            <label>
-                                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="functional">
-                                По функционалу
-                            </label>
-                        </li>
-                    </ul>
-                </fieldset>
                 <!-- Здесь будет input type="range" с ценой. Пока видела мало примеров, как такое делается и не понимаю. -->
                 <fieldset>
                     <legend>Производители:</legend>
@@ -137,6 +110,16 @@
         </section>
         <section class="catalog">
             <h2>Перфораторы</h2>
+            <div class="sorting">
+              <h3>Сортировка:</h3>
+              <ul class="sorting-list">
+                <li class="sorting-item"><a href="#">По цене</a></li>
+                <li class="sorting-item"><a href="#">По типу</a></li>
+                <li class="sorting-item"><a href="#">По функционалу</a></li>
+                <li class="sorting-item"><a href="#">По возрастанию</a></li>
+                <li class="sorting-item"><a href="#">По убыванию</a></li>
+              </ul>
+            </div>
              <ul class="catalog-list">
                 <li class="catalog-item">
                     <h3>
@@ -148,7 +131,6 @@
                     <p class="catalog-item-image">
                         <a href="img/product-1-big.jpg">
                             <img src="img/product-1.jpg" width="218" height="170" alt="Перфоратор BOSCH">
-                            <!-- сжимала jpg до 80% при сохранении в ФШ -->
                         </a>
                     </p>
                     <p>
@@ -315,10 +297,10 @@
             </ul>
       </div>
       <div class="footer-middle">
-        <p class="footer-contacts">
+        <address class="footer-contacts">
             г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
             +7 (812) 555-05-55
-        </p>
+        </address>
         <ul class="catalog-menu">
           <li><a href="#">Материалы</a></li>
           <li><a href="#">Техника</a></li>
@@ -345,8 +327,7 @@
       </div>
     </footer>
     <div class="modal modal-cart">
-        <!-- Что здесь можно зделать с точки зрения доступности? Такие окна как-то озаглавливаются? Может это section со скрытым заголовком,
-            типа "сообщение? "Оформить заказ" и "Продолжить покупки" - не уверена, что это кнопки, а не ссылки -->
+        <!--  -->
         <p class="message">
             Товар добавлен в корзину!
         </p>
