@@ -16,19 +16,21 @@
           </a>
         </div>
             <form class="main-search" method="get" action="https://echo.htmlacademy.ru">
-            <label for="main-search" class="visually-hidden">Поиск</label>
-            <input type="search" placeholder="Поиск:" id="main-search">
+            <label for="main-search">Поиск</label>
+            <input type="search" id="main-search">
             </form>
+          <div class="session-menu">
             <div class="bookmarks"><a href="#">Закладки: <span>0</span></a></div>
             <div class="shopping-bag"><a href="#">Корзина: <span>0</span></a></div>
             <div class="order"><a href="#">Оформить заказ</a></div>
-        </div>
+          </div>
+      </div>
       <div class="header-middle">
           <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
           <section class="contacts">
             <h2 class="visually-hidden">Контакты</h2>
-            <p>+7 (812) 555-05-55</p>
-            <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+            <p class="phone">+7 (812) 555-05-55</p>
+            <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </section>
           <ul class="user-navigation">
             <li class="login-link"><a href="#">Войти</a></li>
@@ -50,7 +52,8 @@
       </div>
     </header>
     <main>
-      <!-- Здесь будет блок, сейчас в задании помеченный красным. Картинки для него пока тоже не нарезала -->
+      <!-- Здесь будет блок, сейчас в задании помеченный красным.-->
+    <div class="index-columns">
       <section class="about-us">
         <h2>Компания «Техномарт»</h2>
         <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства
@@ -62,7 +65,7 @@
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
-        <a class="about-us-more" href="about-us.html">Подробнее о компании</a>
+        <a class="button about-us-more" href="about-us.html">Подробнее о компании</a>
       </section>
       <section class="contacts">
         <h2>Контакты</h2>
@@ -70,14 +73,17 @@
         <a href="map.html">
           <img src="img/map.png" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная, 19/8, Санкт-Петербург">
         </a>
-        <a href="#" class="feedback">Заблудились? Напишите нам</a>
+        <a href="#" class="button feedback">Заблудились? Напишите нам!</a>
       </section>
+    </div>
     </main>
     <footer>
       <div class="footer-top">
-        <a class="footer-logo">
+        <div class="footer-logo">
+        <a>
           <img src="img/logo-technomart.svg" width="137" height="22" alt="Логотип интернет-магазина «Техномарт»">
         </a>
+      </div>
           <ul class="footer-navigation-list">
             <li><a href="#">Компания</a></li>
             <li><a href="#">Новости</a></li>

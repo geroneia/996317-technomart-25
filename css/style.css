@@ -15,8 +15,277 @@ a {
   text-decoration: none;
 }
 
+.button {
+  font-size: 14px;
+  line-height: 18px;
+
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #ee3643;
+  border: none;
+}
 .header-logo {
+  width: 220px;
+  height: 47px;
+
+  text-align: center;
+  box-shadow: inset 0 -5px #b52933;
+  background-color: #ee3643;
+}
+/* Не знаю как отцентровать надпись по вертикали - она же картинка, а не текст. Отступами? Чтобы получилось так, я обернула ссылку, в которой
+лежит картинка в div и ему отдала класс, который раньше был у ссылки (которая тут без адреса, т.к. index - это правильно? Ссылка теперь без класса
+без адреса - это норм?*/
+
+.header-logo:hover,
+.header-logo:active {
+  background-color: #ca2c37;
+}
+
+.header-top,
+.session-menu a {
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;
+
+  background-color: #293449;
+}
+
+.header-top input {
+  border: none;
+  background-color: transparent;
+}
+
+.header-top input:focus {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.order a{
+  background-color: #63a63e;
+}
+
+.order a:hover {
+  background-color: #5fbb2d;
+}
+
+.order a:active {
+  background-color: #518534;
+}
+
+.bookmarks a:hover,
+.shopping-bag a:hover,
+.header-top label:hover{
+  background-color:#212a3a;
+}
+
+.bookmarks a:active,
+.shopping-bag a:active {
+  opacity: 0.6;
+  background-color: #161d29;
+}
+
+.header-middle {
+  background-color: #f3f7f8;
+}
+
+.header-middle h1 {
+  font-size: 16px;
+  line-height: 23px;
+  font-style: italic;
+
+  text-align: left;
+
+  color: #ee3643;
+}
+
+.contacts .phone {
+  font-size: 21px;
+  line-height: 21px;
+
+  color: #ee3643;
+
+  border: 3px solid #ffffff;
+  }
+
+.contacts .address {
+    font-size: 14px;
+    line-height: 24px;
+
+    color: #32425c;
+  }
+
+.user-navigation {
+    list-style: none;
+  }
+
+.user-navigation a {
+  font-size: 21px;
+  line-height: 21px;
+
+    color: #000000;
+
+    background-color: #ffffff;
+  }
+
+.user-navigation a:hover {
+  color: #ee3643;
+}
+
+.user-navigation a:active {
+  color: #000000;
+  opacity: 0.3;
+}
+
+.header-bottom {
+  color: #ffffff;
+
+  background-color: #32425c;
+
+  box-shadow: inset 0 -5px #293449;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a {
+  font-size: 17px;
+  line-height: 17px;
+
+  color: #ffffff;
+}
+
+.site-navigation a:hover {
+  background-color: #293449;
+}
+
+.site-navigation a:active {
+  opacity: 0.5;
+  background-color: #1d2739;
+}
+
+.index-columns {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.about-us h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.about-us p,
+.contacts p {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.about-us .delivery-companies {
+  list-style: none;
+
+  font-size: px;
+  line-height: 20px;
+}
+
+.contacts h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.footer-top,
+.footer-middle {
+  font-size: 18px;
+  line-height: 24px;
+
+  color: #ffffff;
+
+  background-color: #32425c;
+}
+
+.footer-logo {
+  width: 220px;
+  height: 68px;
+
+  text-align: center;
+  box-shadow: inset 0 -5px #b52933;
+  background-color: #ee3643;
+}
+/* Тут с логотипом та же проблема*/
+
+.footer-contacts {
+  font-size: 18px;
+  line-height: 24px;
+  font-style: normal;
+}
+.footer-navigation-list,
+.catalog-menu {
+  list-style: none;
+}
+.footer-navigation-list a{
+  color: #f1f5f7;
+}
+
+.catalog-menu a {
+  color: #ffd180;
+  }
+
+.footer-navigation-list a:hover,
+.catalog-menu a:hover {
+  text-decoration: underline;
+}
+
+.footer-navigation-list a:active,
+.catalog-menu a:active {
+  opacity: 0.5;
+}
+
+.footer-bottom {
+  font-size: 16px;
+  line-height: 18px;
+
+  color: #ffffff;
+  background-color: #293449;
+}
+
+.footer-social {
+  list-style: none;
+}
+
+.footer-social a {
+  color: #ffffff;
+  background-color: #212a3a;
+}
+
+.footer-social a:hover,
+.footer-social a:active {
   background-color: #ee3643;
 }
 
+.footer-feedback a,
+.studio span{
+  color: #ffd180;
+}
 
+.footer-feedback a:hover,
+.studio span:hover{
+  text-decoration: underline;
+}
+
+.footer-feedback a:active,
+.studio span:active{
+  color: #ee3643;
+  text-decoration: none;
+}
+
+.modal {
+  display: none;
+}

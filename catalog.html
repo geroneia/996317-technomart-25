@@ -15,13 +15,16 @@
             <img src="img/logo-technomart.svg" width="110" height="20" alt="Логотип интернет-магазина «Техномарт»">
           </a>
         </div>
-          <ul class="session-menu">
-            <li class="session-menu-item search"><input type="search" placeholder="Поиск:" id="main-search"></li>
-            <li class="session-menu-item bookmarks"><a href="#">Закладки: <span>0</span></a></li>
-            <li class="session-menu-item shopping-bag"><a href="#">Корзина: <span>0</span></a></li>
-            <li class="session-menu-item order"><a href="#">Оформить заказ</a></li>
-          </ul>
+        <form class="main-search" method="get" action="https://echo.htmlacademy.ru">
+          <label for="main-search">Поиск</label>
+          <input type="search" id="main-search">
+          </form>
+        <div class="session-menu">
+          <div class="bookmarks"><a href="#">Закладки: <span>0</span></a></div>
+          <div class="shopping-bag"><a href="#">Корзина: <span>0</span></a></div>
+          <div class="order"><a href="#">Оформить заказ</a></div>
         </div>
+      </div>
       <div class="header-middle">
           <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
           <section class="contacts">
@@ -288,9 +291,11 @@
     </main>
     <footer>
       <div class="footer-top">
-        <a class="footer-logo">
-          <img src="img/logo-technomart.svg" width="137" height="22" alt="Логотип интернет-магазина «Техномарт»">
-        </a>
+          <div class="footer-logo">
+              <a>
+                <img src="img/logo-technomart.svg" width="137" height="22" alt="Логотип интернет-магазина «Техномарт»">
+              </a>
+          </div>
           <ul class="footer-navigation-list">
             <li><a href="#">Компания</a></li>
             <li><a href="#">Новости</a></li>
