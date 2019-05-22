@@ -168,6 +168,7 @@ a {
   background-color: #1d2739;
 }
 
+
 .index-columns {
   color: #000000;
 
@@ -199,6 +200,178 @@ a {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.main-catalog {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+/* Я не нашла в стайлгайде указания для хлебных крошек - как они меняются в активном состоянии. А у нас в требованиях - нужно прописывать
+всем ссылам состояния. Как быть? */
+
+.filters h2 {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  background-color: #f7f3ec;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter legend {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.filter ul {
+  list-style: none;
+
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.filter-input:disabled + label {
+  color: #000000;
+  opacity: 0.5;
+}
+
+/* Сами "кружочки" и квадратики" у радио и чекбокса будут же рисоваться позже и тогда к ним пропишется изменение цвета при наведении, верно? */
+
+.filter .button {
+  color: #000000;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e5e5e5;
+}
+
+.sorting {
+  background-color: #f7f3ec;
+}
+
+.sorting h3 {
+  text-transform: uppercase;
+}
+
+.sorting-list {
+  list-style: none;
+}
+
+.sorting-list a {
+  color: #000000;
+  opacity: 0.3;
+
+  text-decoration: underline #ee3643;
+  text-decoration-style: dotted;
+}
+
+.sorting-list a:hover {
+  opacity: 1;
+  text-decoration-style: solid;
+}
+
+.sorting-item-active a {
+  opacity: 1;
+  text-decoration: none;
+
+  color: #ee3643;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item {
+  border: 1px solid #e4e4e4;
+}
+
+.catalog-item:hover {
+  border-color: transparent;
+  /* В макете, вроде бы, пропадает рамочка при наведении. Если совсем убрать - все перекашивается, поэтому сделала прозрачной. Не уверена,
+  что правильно считываю тени с макета */
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
+.catalog-item a {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+
+  color: #000000;
+}
+
+.catalog-item-model {
+  text-transform: uppercase;
+}
+/* Прописала на всякий случай - там и так капсом набрано. */
+
+.catalog-item p {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.catalog-item .old-price {
+  text-decoration: line-through;
+
+  color: #999999;
+}
+
+.catalog-item .current-price {
+  color: #ffffff;
+
+  background-color: #ee3643;
+}
+
+/* Как добавить в разметку состояние карточки при наведении - когда там кнопки появляются? Это должны быть блоки размером с фотку перфоратора
+которые рисуются под каждым .catalog-item, и в css display: none?  */
+
+.pagination {
+  list-style: none;
+}
+
+.pagination a {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  color: #000000;
+
+  border: 1px solid #e5e5e5;
+}
+
+.pagination a:hover {
+  border: 1px solid #bdc6ca;
+}
+
+.pagination a:active {
+  border: 1px solid #ee3643;
+}
+
+.paginalion-item-current {
+  background-color: #ee3643;
+
+  border: 1px solid #ee3643;
 }
 
 .footer-top,
@@ -285,6 +458,7 @@ a {
   color: #ee3643;
   text-decoration: none;
 }
+/* Почему в футере и хэдере между дивами -top и -bottom пустые промежутки? Это браузер рисует какие-то отступы, т.к. это блочные элементы?*/
 
 .modal {
   display: none;
