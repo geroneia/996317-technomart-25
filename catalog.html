@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="./css/normalize.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
   </head>
   <body>
     <header>
       <div class="header-top">
           <a class="header-logo" href="index.html">
-            <img src="img/header-logo.png" width="220" height="47" alt="Логотип интернет-магазина «Техномарт»">
+            <img src="img/logo-technomart.svg" width="220" height="47" alt="Логотип интернет-магазина «Техномарт»">
           </a>
           <ul class="session-menu">
             <li class="session-menu-item search"><input type="search" placeholder="Поиск:" id="main-search"></li>
@@ -52,7 +55,7 @@
         <section class="filters">
             <h2>Фильтр:</h2>
             <form class="filter" method="get" action="">
-                <!-- Здесь будет input type="range" с ценой. Пока видела мало примеров, как такое делается и не понимаю. -->
+                <!-- Здесь будет input type="range" с ценой.  -->
                 <fieldset>
                     <legend>Производители:</legend>
                     <ul>
@@ -273,20 +276,18 @@
                 </li>
             </ul>
         </section>
-        <nav class="pagination">
-            <ul>
+            <ul class="pagination">
                 <li class="paginalion-item paginalion-item-current"><a href="#">1</a></li>
                 <li class="paginalion-item"><a href="#">2</a></li>
                 <li class="paginalion-item"><a href="#">3</a></li>
                 <li class="paginalion-item"><a href="#">Следующая</a></li>
             </ul>
-        </nav>
-         <!-- Здесь будет блок, выделенный красным. (<article>?) -->
+         <!-- Здесь будет блок, выделенный красным. -->
     </main>
     <footer>
       <div class="footer-top">
         <a class="footer-logo">
-          <img src="img/footer-logo.png" width="220" height="68" alt="Логотип интернет-магазина «Техномарт»">
+          <img src="img/logo-technomart.svg" width="220" height="68" alt="Логотип интернет-магазина «Техномарт»">
         </a>
           <ul class="footer-navigation-list">
             <li><a href="#">Компания</a></li>
@@ -327,7 +328,6 @@
       </div>
     </footer>
     <div class="modal modal-cart">
-        <!--  -->
         <p class="message">
             Товар добавлен в корзину!
         </p>
