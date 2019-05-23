@@ -11,6 +11,13 @@ body {
   background-color: #ffffff;
 }
 
+.main-catalog {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
+
 a {
   text-decoration: none;
 }
@@ -27,17 +34,19 @@ a {
   background-color: #ee3643;
   border: none;
 }
+
 .header-logo {
+  display: flex;
   width: 220px;
   height: 47px;
 
-  text-align: center;
   box-shadow: inset 0 -5px #b52933;
   background-color: #ee3643;
 }
-/* Не знаю как отцентровать надпись по вертикали - она же картинка, а не текст. Отступами? Чтобы получилось так, я обернула ссылку, в которой
-лежит картинка в div и ему отдала класс, который раньше был у ссылки (которая тут без адреса, т.к. index - это правильно? Ссылка теперь без класса
-без адреса - это норм?*/
+
+.header-logo img {
+  margin: auto;
+}
 
 .header-logo:hover,
 .header-logo:active {
@@ -64,7 +73,7 @@ a {
   background-color: #ffffff;
 }
 
-.order a{
+.order a {
   background-color: #63a63e;
 }
 
@@ -78,14 +87,18 @@ a {
 
 .bookmarks a:hover,
 .shopping-bag a:hover,
-.header-top label:hover{
-  background-color:#212a3a;
+.header-top label:hover {
+  background-color: #212a3a;
 }
 
 .bookmarks a:active,
 .shopping-bag a:active {
   opacity: 0.6;
   background-color: #161d29;
+}
+
+.item-added a {
+  background-color: #ee3643;
 }
 
 .header-middle {
@@ -102,43 +115,72 @@ a {
   color: #ee3643;
 }
 
-.contacts .phone {
+.contacts .phone,
+.contacts .phone:hover,
+.contacts .phone:active {
   font-size: 21px;
   line-height: 21px;
 
   color: #ee3643;
 
   border: 3px solid #ffffff;
-  }
+}
 
 .contacts .address {
-    font-size: 14px;
-    line-height: 24px;
+  font-size: 14px;
+  line-height: 24px;
 
-    color: #32425c;
-  }
+  color: #32425c;
+}
 
 .user-navigation {
-    list-style: none;
-  }
+  list-style: none;
+}
 
 .user-navigation a {
   font-size: 21px;
   line-height: 21px;
 
-    color: #000000;
+  color: #000000;
 
-    background-color: #ffffff;
-  }
+  background-color: #ffffff;
+}
+
+.user-orders-link a,
+.user-account-link a {
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: underline;
+
+  color: #32425c;
+  background-color: #f1f5f7;
+}
+
+.user-orders-link a:hover,
+.user-account-link a:hover {
+  color: #ee3643;
+}
+
+.user-orders-link a:active,
+.user-account-link a:active {
+  color: #32425c;
+  opacity: 0.3;
+}
 
 .user-navigation a:hover {
   color: #ee3643;
+}
+
+.user-profile-link a:hover {
+  color: #000000;
 }
 
 .user-navigation a:active {
   color: #000000;
   opacity: 0.3;
 }
+
+
 
 .header-bottom {
   color: #ffffff;
@@ -152,7 +194,8 @@ a {
   list-style: none;
 }
 
-.site-navigation a {
+.site-navigation a,
+.site-navigation .current-page {
   font-size: 17px;
   line-height: 17px;
 
@@ -202,26 +245,19 @@ a {
   text-transform: uppercase;
 }
 
-.main-catalog {
-  font-family: "PT Sans", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 18px;
-}
-
 .breadcrumbs {
   list-style: none;
 }
 
-.breadcrumbs a {
+.breadcrumbs a,
+.breadcrumbs a:hover,
+.breadcrumbs a:active {
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
 
   color: #000000;
 }
-/* Я не нашла в стайлгайде указания для хлебных крошек - как они меняются в активном состоянии. А у нас в требованиях - нужно прописывать
-всем ссылам состояния. Как быть? */
 
 .filters h2 {
   font-size: 13px;
@@ -250,12 +286,10 @@ a {
   text-transform: uppercase;
 }
 
-.filter-input:disabled + label {
+.filter-input:disabled+label {
   color: #000000;
   opacity: 0.5;
 }
-
-/* Сами "кружочки" и квадратики" у радио и чекбокса будут же рисоваться позже и тогда к ним пропишется изменение цвета при наведении, верно? */
 
 .filter .button {
   color: #000000;
@@ -307,8 +341,7 @@ a {
 
 .catalog-item:hover {
   border-color: transparent;
-  /* В макете, вроде бы, пропадает рамочка при наведении. Если совсем убрать - все перекашивается, поэтому сделала прозрачной. Не уверена,
-  что правильно считываю тени с макета */
+
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
@@ -323,15 +356,18 @@ a {
 .catalog-item-model {
   text-transform: uppercase;
 }
+
 /* Прописала на всякий случай - там и так капсом набрано. */
 
-.catalog-item p {
+.catalog-item {
   font-size: 17px;
   font-weight: 700;
   line-height: 18px;
   text-transform: uppercase;
 }
+
 .catalog-item .old-price {
+
   text-decoration: line-through;
 
   color: #999999;
@@ -343,8 +379,39 @@ a {
   background-color: #ee3643;
 }
 
-/* Как добавить в разметку состояние карточки при наведении - когда там кнопки появляются? Это должны быть блоки размером с фотку перфоратора
-которые рисуются под каждым .catalog-item, и в css display: none?  */
+.item-adding .to-cart {
+  background-color: #63a63e;
+  box-shadow: inset 0 -3px #367315;
+}
+
+.item-adding .to-cart:hover {
+  background-color: #5fbb2d;
+}
+
+.item-adding .to-cart:active {
+  box-shadow: none;
+  background-color: #518534;
+}
+
+.item-adding .to-bookmarks {
+  color: #32425c;
+  background-color: #ffffff;
+  border: 3px solid #63a63e;
+}
+
+.item-adding .to-bookmarks:hover {
+  border-color: #32425c;
+}
+
+.item-adding .to-bookmarks:active {
+  color: ##32425c;
+  opacity: 0.3;
+  border-color: #c1c6ce;
+}
+
+/* .item-adding {
+  display: none;
+} */
 
 .pagination {
   list-style: none;
@@ -385,6 +452,8 @@ a {
 }
 
 .footer-logo {
+  display: flex;
+
   width: 220px;
   height: 68px;
 
@@ -392,24 +461,29 @@ a {
   box-shadow: inset 0 -5px #b52933;
   background-color: #ee3643;
 }
-/* Тут с логотипом та же проблема*/
+
+.footer-logo img {
+  margin: auto;
+}
 
 .footer-contacts {
   font-size: 18px;
   line-height: 24px;
   font-style: normal;
 }
+
 .footer-navigation-list,
 .catalog-menu {
   list-style: none;
 }
-.footer-navigation-list a{
+
+.footer-navigation-list a {
   color: #f1f5f7;
 }
 
 .catalog-menu a {
   color: #ffd180;
-  }
+}
 
 .footer-navigation-list a:hover,
 .catalog-menu a:hover {
@@ -444,21 +518,20 @@ a {
 }
 
 .footer-feedback a,
-.studio span{
+.studio span {
   color: #ffd180;
 }
 
 .footer-feedback a:hover,
-.studio span:hover{
+.studio span:hover {
   text-decoration: underline;
 }
 
 .footer-feedback a:active,
-.studio span:active{
+.studio span:active {
   color: #ee3643;
   text-decoration: none;
 }
-/* Почему в футере и хэдере между дивами -top и -bottom пустые промежутки? Это браузер рисует какие-то отступы, т.к. это блочные элементы?*/
 
 .modal {
   display: none;
