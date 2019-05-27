@@ -35,10 +35,43 @@ a {
   border: none;
 }
 
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 60px;
+  background-color: #f3f7f9;
+}
+
+.header-top-wrapper {
+  display: flex;
+  width: 940px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-height: 42px;
+}
+
 .header-logo {
   display: flex;
   width: 220px;
   height: 47px;
+  margin-right: 10px;
 
   box-shadow: inset 0 -5px #b52933;
   background-color: #ee3643;
@@ -53,6 +86,10 @@ a {
   background-color: #ca2c37;
 }
 
+.header-top {
+  margin-bottom: 45px;
+}
+
 .header-top,
 .session-menu a {
   font-size: 17px;
@@ -60,6 +97,19 @@ a {
   color: #ffffff;
 
   background-color: #293449;
+}
+
+.main-search {
+  align-self: center;
+  width:230px;
+}
+
+.session-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 460px;
+  margin-left: auto;
 }
 
 .header-top input {
@@ -73,6 +123,11 @@ a {
   background-color: #ffffff;
 }
 
+.order {
+  width: 150px;
+  margin-left: 10px;
+}
+
 .order a {
   background-color: #63a63e;
 }
@@ -83,6 +138,18 @@ a {
 
 .order a:active {
   background-color: #518534;
+}
+
+/* Надпись "Оформить заказ" не прижата к правому краю контейнера, т.к. еще не оформлены вложенные блоки */
+
+.bookmarks {
+  width: 150px;
+  margin-left: 10px;
+}
+
+.shopping-bag {
+  width: 140px;
+
 }
 
 .bookmarks a:hover,
@@ -102,10 +169,21 @@ a {
 }
 
 .header-middle {
+  width: 100%;
+  margin-bottom: 42px;
   background-color: #f3f7f8;
 }
 
+.header-middle-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .header-middle h1 {
+  width: 300px;
+  margin: 0;
+  padding: 0;
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
@@ -115,9 +193,23 @@ a {
   color: #ee3643;
 }
 
-.contacts .phone,
-.contacts .phone:hover,
-.contacts .phone:active {
+.header-contacts {
+  width: 300px;
+  margin: 0;
+  padding: 0;
+}
+
+.header-contacts .phone {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.header-contacts .phone a,
+.header-contacts .phone  a:hover,
+.header-contacts .phone  a:active {
+  padding: 0;
+  margin: 0;
   font-size: 21px;
   line-height: 21px;
 
@@ -126,7 +218,9 @@ a {
   border: 3px solid #ffffff;
 }
 
-.contacts .address {
+.header-contacts .address {
+  padding: 0;
+  margin: 0;
   font-size: 14px;
   line-height: 24px;
 
@@ -134,16 +228,30 @@ a {
 }
 
 .user-navigation {
+  width: 300px;
+  padding: 0;
+  margin: 0;
   list-style: none;
-}
+  }
+
+/* А здесь можно использовать флексы? На разных страницах эта часть выглядит по-разному - на первой я бы выровняла их в направлении row и в
+конце оси, а на второй там columns, наверное. Сделать это через добавочный класс? */
 
 .user-navigation a {
+  padding: 0;
+  margin: 0;
   font-size: 21px;
   line-height: 21px;
 
   color: #000000;
 
   background-color: #ffffff;
+}
+
+.login-link,
+.registration-link {
+  padding: 0;
+  margin: 0;
 }
 
 .user-orders-link a,
@@ -180,18 +288,26 @@ a {
   opacity: 0.3;
 }
 
+.site-navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 60px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
-
-.header-bottom {
   color: #ffffff;
 
   background-color: #32425c;
-
   box-shadow: inset 0 -5px #293449;
 }
 
-.site-navigation {
-  list-style: none;
+/* Наверное, тут неправильно. Сначала сделала, потом сообразила, что мы еще не занимались стилизацией блоков такого уровня вложенности*/
+
+.site-navigation li {
+  margin: 0;
+  padding: 0;
 }
 
 .site-navigation a,
@@ -213,10 +329,21 @@ a {
 
 
 .index-columns {
+  display: flex;
+  justify-content: space-between;
   color: #000000;
-
+  margin-bottom: 86px;
+  padding-top: 82px;
+  /* Здесь задала внутренний отступ сверху уже сейчас, потому что в верстке нет блоков, выделенных красным, которые стояли бы выше и "толкали"
+  этот блок */
   background-color: #ffffff;
 }
+
+.about-us {
+  width: 550px;
+  padding: 0;
+  margin: 0;
+  }
 
 .about-us h2 {
   font-size: 30px;
@@ -226,6 +353,8 @@ a {
 
 .about-us p,
 .contacts p {
+  padding: 0;
+  margin: 0;
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
   font-size: 13px;
@@ -233,19 +362,38 @@ a {
 }
 
 .about-us .delivery-companies {
+  padding: 0;
+  margin: 0;
+
   list-style: none;
 
   font-size: px;
   line-height: 20px;
 }
 
+.contacts {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+}
+
 .contacts h2 {
+  display: block;
+  margin: 0;
+
+  padding: 0;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
 }
 
+/* Не понимаю как управлять этим блоком. Между ним и следующим расстояние в 20px, но задать  .contacts h2 маргин снизу нельзя, а если задать
+маргин сверху следующему блоку .catalog-columns - все получается. .contacts h2 нужно сметить тип или сделать обертку, чтобы управлять его высотой
+и отступами?*/
+
 .breadcrumbs {
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -259,7 +407,32 @@ a {
   color: #000000;
 }
 
+.catalog-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog {
+  width: 700px;
+ }
+
+.main-catalog h2 {
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  background-color: #f2f6f8;
+}
+
+.filters {
+  width: 220px;
+}
+
 .filters h2 {
+  margin: 0;
+  padding: 0;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -268,10 +441,14 @@ a {
 }
 
 .filter fieldset {
+  margin: 0;
+  padding: 0;
   border: none;
 }
 
 .filter legend {
+  margin: 0;
+  padding: 0;
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
@@ -279,6 +456,8 @@ a {
 }
 
 .filter ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 
   font-size: 15px;
@@ -300,14 +479,19 @@ a {
 }
 
 .sorting {
+  margin-bottom: 20px;
   background-color: #f7f3ec;
 }
 
 .sorting h3 {
+  margin: 0;
+  padding: 0;
   text-transform: uppercase;
 }
 
 .sorting-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -332,12 +516,21 @@ a {
 }
 
 .catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   list-style: none;
 }
+/* Почему-то карточки начинают выстраиваться после отступа слева, и  не помещаются по 3 в ряд */
 
 .catalog-item {
+  width: 220px;
+  margin: 0;
+  padding: 0;
   border: 1px solid #e4e4e4;
+
 }
+
 
 .catalog-item:hover {
   border-color: transparent;
@@ -441,15 +634,29 @@ a {
   border: 1px solid #ee3643;
 }
 
-.footer-top,
-.footer-middle {
-  font-size: 18px;
-  line-height: 24px;
-
+.main-footer {
+  margin: 0;
+  padding: 0;
   color: #ffffff;
 
   background-color: #32425c;
 }
+
+.footer-top,
+.footer-middle {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 24px;
+
+
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  }
 
 .footer-logo {
   display: flex;
@@ -466,19 +673,49 @@ a {
   margin: auto;
 }
 
-.footer-contacts {
-  font-size: 18px;
-  line-height: 24px;
-  font-style: normal;
+.footer-navigation-list {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 560px;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+}
+
+.footer-navigation-list li {
+ text-align: right;
 }
 
 .footer-navigation-list,
 .catalog-menu {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .footer-navigation-list a {
   color: #f1f5f7;
+}
+
+.footer-middle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.footer-contacts {
+  margin: 0;
+  padding: 0;
+  width: 380px;
+  font-size: 18px;
+  line-height: 24px;
+  font-style: normal;
+}
+
+.catalog-menu {
+  display: flex;
+  justify-content: flex-end;
+  width: 550px;
 }
 
 .catalog-menu a {
@@ -496,14 +733,35 @@ a {
 }
 
 .footer-bottom {
-  font-size: 16px;
-  line-height: 18px;
+ width: 100%;
+ background-color: #293449;
+ font-size: 16px;
+ line-height: 18px;
+}
 
-  color: #ffffff;
-  background-color: #293449;
+.footer-bottom-wrapper {
+  display: flex;
+  align-items: center;
+  width: 940px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-height: 107px;
+}
+
+.footer-copyright {
+  width: 240px;
+  margin: 0;
+  margin-right: 150px;
+  padding: 0;
+
 }
 
 .footer-social {
+  width: 230px;
+  margin: 0;
+  margin-right: 20px;
+  padding: 0;
   list-style: none;
 }
 
@@ -515,6 +773,20 @@ a {
 .footer-social a:hover,
 .footer-social a:active {
   background-color: #ee3643;
+}
+
+.footer-feedback {
+  width: 140px;
+  margin: 0;
+  margin-right: 40px;
+  padding: 0;
+}
+
+.studio {
+  width: 140px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .footer-feedback a,
