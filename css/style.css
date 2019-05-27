@@ -101,7 +101,7 @@ a {
 
 .main-search {
   align-self: center;
-  width:230px;
+  width: 230px;
 }
 
 .session-menu {
@@ -206,8 +206,8 @@ a {
 }
 
 .header-contacts .phone a,
-.header-contacts .phone  a:hover,
-.header-contacts .phone  a:active {
+.header-contacts .phone a:hover,
+.header-contacts .phone a:active {
   padding: 0;
   margin: 0;
   font-size: 21px;
@@ -232,7 +232,7 @@ a {
   padding: 0;
   margin: 0;
   list-style: none;
-  }
+}
 
 /* А здесь можно использовать флексы? На разных страницах эта часть выглядит по-разному - на первой я бы выровняла их в направлении row и в
 конце оси, а на второй там columns, наверное. Сделать это через добавочный класс? */
@@ -343,7 +343,7 @@ a {
   width: 550px;
   padding: 0;
   margin: 0;
-  }
+}
 
 .about-us h2 {
   font-size: 30px;
@@ -414,7 +414,7 @@ a {
 
 .catalog {
   width: 700px;
- }
+}
 
 .main-catalog h2 {
   margin: 0;
@@ -521,6 +521,7 @@ a {
   justify-content: flex-start;
   list-style: none;
 }
+
 /* Почему-то карточки начинают выстраиваться после отступа слева, и  не помещаются по 3 в ряд */
 
 .catalog-item {
@@ -656,7 +657,7 @@ a {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
-  }
+}
 
 .footer-logo {
   display: flex;
@@ -683,7 +684,7 @@ a {
 }
 
 .footer-navigation-list li {
- text-align: right;
+  text-align: right;
 }
 
 .footer-navigation-list,
@@ -733,10 +734,10 @@ a {
 }
 
 .footer-bottom {
- width: 100%;
- background-color: #293449;
- font-size: 16px;
- line-height: 18px;
+  width: 100%;
+  background-color: #293449;
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .footer-bottom-wrapper {
