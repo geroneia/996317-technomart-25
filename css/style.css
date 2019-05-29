@@ -23,6 +23,8 @@ a {
 }
 
 .button {
+  display: inline-block;
+
   font-size: 14px;
   line-height: 18px;
 
@@ -35,6 +37,11 @@ a {
   border: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   width: 940px;
   margin: 0 auto;
@@ -42,36 +49,48 @@ a {
   padding-right: 10px;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
-  clip: rect(0 0 0 0);
+
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .main-header {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   width: 100%;
   padding-bottom: 60px;
   background-color: #f3f7f9;
+  /* outline: 2px solid blue; */
 }
 
 .header-top-wrapper {
   display: flex;
+  position: relative;
   width: 940px;
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
-  min-height: 42px;
 }
 
 .header-logo {
   display: flex;
+  position: absolute;
+  top: 0;
+  left: 10px;
   width: 220px;
   height: 47px;
-  margin-right: 10px;
 
   box-shadow: inset 0 -5px #b52933;
   background-color: #ee3643;
@@ -86,10 +105,6 @@ a {
   background-color: #ca2c37;
 }
 
-.header-top {
-  margin-bottom: 45px;
-}
-
 .header-top,
 .session-menu a {
   font-size: 17px;
@@ -100,35 +115,70 @@ a {
 }
 
 .main-search {
+  position: relative;
   align-self: center;
-  width: 230px;
+  width: 270px;
+  margin-left: 220px;
+  /* outline: 2px solid red; */
 }
 
-.session-menu {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 460px;
-  margin-left: auto;
+.main-search::before {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  top: 12px;
+  left: 17px;
+  background-image: url("../img/icon-search.svg");
+  backrgound-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.main-search:hover::before {
+  opacity: 1;
 }
 
 .header-top input {
-  border: none;
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 49px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
   background-color: transparent;
+  border: none;
 }
 
+/* Как сделать так, чтобы когда курсор стоит  в окне поиска, иконка "лупа" не исчезала и становилась красной? */
+
+.header-top input::placeholder {
+  color: #ffffff;
+}
+
+/* Читала где-то, что такая конструкция с плейсхолдером не везде будет работать, в частности, что нужно сделать, чтобы IE11 воспринял ее? */
 .header-top input:focus {
   color: #000000;
 
   background-color: #ffffff;
 }
 
-.order {
-  width: 150px;
-  margin-left: 10px;
+
+.session-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  width: 450px;
+  margin-left: auto;
+  /* outline: 2px solid red; */
 }
 
 .order a {
+  display: block;
+  width: 110px;
+  margin: 0;
+  padding: 12px 20px;
   background-color: #63a63e;
 }
 
@@ -140,22 +190,62 @@ a {
   background-color: #518534;
 }
 
-/* Надпись "Оформить заказ" не прижата к правому краю контейнера, т.к. еще не оформлены вложенные блоки */
+.bookmarks a {
+  display: block;
+  position: relative;
+  width: 106px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 44px;
 
-.bookmarks {
-  width: 150px;
-  margin-left: 10px;
 }
 
-.shopping-bag {
-  width: 140px;
+.bookmarks a::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 16px;
+  left: 17px;
+  top: 12px;
+  background-image: url("../img/icon-bookmark.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
 
+.shopping-bag a {
+  display: block;
+  position: relative;
+  width: 100px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 50px;
+  /* outline: 2px solid red; */
+
+}
+
+.shopping-bag a::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 20px;
+  top: 12px;
+  background-image: url("../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
 }
 
 .bookmarks a:hover,
 .shopping-bag a:hover,
 .header-top label:hover {
   background-color: #212a3a;
+}
+
+.bookmarks a:hover::before,
+.shopping-bag a:hover::before {
+  opacity: 1;
 }
 
 .bookmarks a:active,
@@ -170,20 +260,22 @@ a {
 
 .header-middle {
   width: 100%;
-  margin-bottom: 42px;
   background-color: #f3f7f8;
 }
 
 .header-middle-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .header-middle h1 {
-  width: 300px;
+  display: block;
+  width: 200px;
   margin: 0;
-  padding: 0;
+  padding-top: 48px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 41px;
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
@@ -191,54 +283,93 @@ a {
   text-align: left;
 
   color: #ee3643;
+
 }
 
 .header-contacts {
   width: 300px;
   margin: 0;
   padding: 0;
+  padding-top: 45px;
+
 }
 
-.header-contacts .phone {
+.contacts-phone {
   padding: 0;
   margin: 0;
-  text-align: center;
+  margin-bottom: 4px;
 }
 
-.header-contacts .phone a,
-.header-contacts .phone a:hover,
-.header-contacts .phone a:active {
-  padding: 0;
+.contacts-phone a,
+.contacts-phone a:hover,
+.contacts-phone a:active {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
   margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 72px;
+  padding-right: 52px;
   font-size: 21px;
   line-height: 21px;
 
   color: #ee3643;
-
+  /* outline: 2px solid orange; */
   border: 3px solid #ffffff;
 }
 
-.header-contacts .address {
+.contacts-phone a::before {
+  content: "";
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  top: 10px;
+  left: 13px;
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.contacts-address {
+  display: block;
   padding: 0;
+  padding-left: 10px;
   margin: 0;
   font-size: 14px;
   line-height: 24px;
 
   color: #32425c;
+  /* outline: 2px solid orange; */
 }
 
 .user-navigation {
+  display: flex;
+  justify-content: flex-end;
   width: 300px;
   padding: 0;
+  padding-top: 45px;
   margin: 0;
   list-style: none;
+
 }
 
-/* А здесь можно использовать флексы? На разных страницах эта часть выглядит по-разному - на первой я бы выровняла их в направлении row и в
-конце оси, а на второй там columns, наверное. Сделать это через добавочный класс? */
+.login-link,
+.registration-link {
+  min-width: 100px;
+  padding: 0;
+  margin: 0;
+}
+
+.login-link {
+  margin-right: 6px;
+}
 
 .user-navigation a {
-  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 12px 25px;
   margin: 0;
   font-size: 21px;
   line-height: 21px;
@@ -248,10 +379,22 @@ a {
   background-color: #ffffff;
 }
 
-.login-link,
-.registration-link {
-  padding: 0;
-  margin: 0;
+.login-link a {
+  position: relative;
+  padding-left: 48px;
+}
+
+.login-link a::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 13px;
+  width: 20px;
+  height: 17px;
+  background-image: url("../img/icon-login.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
 }
 
 .user-orders-link a,
@@ -290,9 +433,9 @@ a {
 
 .site-navigation {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 940px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -303,18 +446,24 @@ a {
   box-shadow: inset 0 -5px #293449;
 }
 
-/* Наверное, тут неправильно. Сначала сделала, потом сообразила, что мы еще не занимались стилизацией блоков такого уровня вложенности*/
 
 .site-navigation li {
   margin: 0;
   padding: 0;
+
 }
 
 .site-navigation a,
 .site-navigation .current-page {
+  display: block;
+  margin: 0;
+  padding-top: 21px;
+  padding-bottom: 23px;
+  padding-left: 30px;
+  padding-right: 30px;
   font-size: 17px;
   line-height: 17px;
-
+  vertical-align: middle;
   color: #ffffff;
 }
 
@@ -332,11 +481,11 @@ a {
   display: flex;
   justify-content: space-between;
   color: #000000;
-  margin-bottom: 86px;
+
   padding-top: 82px;
-  /* Здесь задала внутренний отступ сверху уже сейчас, потому что в верстке нет блоков, выделенных красным, которые стояли бы выше и "толкали"
-  этот блок */
   background-color: #ffffff;
+  /* При проверке через Perfect Pixel текст, особенно в первом абзаце about-us, особенно в концах строк не совпадает
+  не знаю, как это исправить и насколько это критично */
 }
 
 .about-us {
@@ -345,8 +494,22 @@ a {
   margin: 0;
 }
 
-.about-us h2 {
+.contacts {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+
+
+}
+
+.about-us h2,
+.contacts h2 {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 26px;
   font-size: 30px;
+  font-weight: 400;
   line-height: 30px;
   text-transform: uppercase;
 }
@@ -355,46 +518,92 @@ a {
 .contacts p {
   padding: 0;
   margin: 0;
+  margin-bottom: 24px;
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
 }
 
-.about-us .delivery-companies {
+.about-us p:last-of-type {
+  margin-bottom: 22px;
+
+}
+
+
+.contacts p {
+  padding-right: 115px;
+  margin-bottom: 30px;
+}
+/* Тут тоже (как на строке 67 в index.html нужен был перенос строки, и я не использовала <br> - задала паддинг. */
+
+.delivery-companies {
   padding: 0;
+  padding-left: 36px;
   margin: 0;
 
   list-style: none;
 
-  font-size: px;
+  font-size: 18px;
   line-height: 20px;
 }
 
-.contacts {
-  margin: 0;
-  padding: 0;
+.delivery-companies li {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.delivery-companies li::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -36px;
+  width: 25px;
+  height: 2px;
+  background-color: #ee3643;
+}
+
+.delivery-companies li:last-child {
+  margin-bottom: 0;
+}
+
+.button-about-us,
+.button-feedback {
+  padding-top: 10px;
+  padding-bottom: 10px;
+ margin-top: 37px;
+ border-radius: 3px;
+}
+
+.button-about-us {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.button-feedback {
+  width: 100%;
+  text-align: center;
+}
+/* При проверке через Perfect Pixel эта кнопка не совпадает, не понимаю, как исправить */
+
+.contacts .map {
   width: 300px;
-}
-
-.contacts h2 {
-  display: block;
+  height: 158px;
   margin: 0;
-
   padding: 0;
-  font-size: 30px;
-  line-height: 30px;
-  text-transform: uppercase;
 }
-
-/* Не понимаю как управлять этим блоком. Между ним и следующим расстояние в 20px, но задать  .contacts h2 маргин снизу нельзя, а если задать
-маргин сверху следующему блоку .catalog-columns - все получается. .contacts h2 нужно сметить тип или сделать обертку, чтобы управлять его высотой
-и отступами?*/
 
 .breadcrumbs {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.contacts .map {
+  width: 300px;
+  height: 158px;
+  margin: 0;
+  padding: 0;
 }
 
 .breadcrumbs a,
@@ -636,7 +845,10 @@ a {
 }
 
 .main-footer {
+  display: flex;
+  flex-direction: column;
   margin: 0;
+  margin-top: 85px;
   padding: 0;
   color: #ffffff;
 
@@ -645,23 +857,26 @@ a {
 
 .footer-top,
 .footer-middle {
+  width: 940px;
   margin: 0;
   padding: 0;
   font-size: 18px;
   line-height: 24px;
-
+  outline: 2px solid red;
 
 }
 
 .footer-top {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
+   display: flex;
+  position: relative;
+  padding-left: 220px;
 }
 
 .footer-logo {
   display: flex;
-
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 220px;
   height: 68px;
 
@@ -671,20 +886,25 @@ a {
 }
 
 .footer-logo img {
+  width: 137px;
+  height: 22px;
   margin: auto;
 }
 
 .footer-navigation-list {
   display: flex;
   justify-content: flex-end;
-  min-width: 560px;
+  flex-wrap: wrap;
+  width: 720px;
   margin: 0;
   padding: 0;
-  margin-left: auto;
+  margin-left: 420px;
+  outline: 2px solid #518534
 }
 
 .footer-navigation-list li {
-  text-align: right;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-navigation-list,
@@ -695,6 +915,11 @@ a {
 }
 
 .footer-navigation-list a {
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-top: 39px;
+  padding-left: 59px;
   color: #f1f5f7;
 }
 
