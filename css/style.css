@@ -807,7 +807,7 @@ img {
 }
 
 .item-adding .to-bookmarks:active {
-  color: ##32425c;
+  color: #32425c;
   opacity: 0.3;
   border-color: #c1c6ce;
 }
@@ -862,7 +862,7 @@ img {
   padding: 0;
   font-size: 18px;
   line-height: 24px;
-  outline: 2px solid red;
+
 
 }
 
@@ -899,7 +899,7 @@ img {
   margin: 0;
   padding: 0;
   margin-left: 420px;
-  outline: 2px solid #518534
+  /* outline: 2px solid #518534 */
 }
 
 .footer-navigation-list li {
@@ -932,6 +932,8 @@ img {
 .footer-contacts {
   margin: 0;
   padding: 0;
+  padding-top: 34px;
+  padding-left: 4px;
   width: 380px;
   font-size: 18px;
   line-height: 24px;
@@ -942,11 +944,19 @@ img {
   display: flex;
   justify-content: flex-end;
   width: 550px;
+  padding-top: 34px;
 }
 
 .catalog-menu a {
+  display: block;
+  min-width: 55px;
+  margin: 0;
+  padding: 0;
+  padding-left: 59px;
   color: #ffd180;
 }
+/* В курсе говорилось о том, что флекс элементы должны иметь заданную ширину или высоту. Тут разные по ширине пункты,
+я задала минимальную по слову "Техника". Надеюсь, правильно */
 
 .footer-navigation-list a:hover,
 .catalog-menu a:hover {
@@ -967,12 +977,8 @@ img {
 
 .footer-bottom-wrapper {
   display: flex;
-  align-items: center;
   width: 940px;
   margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  min-height: 107px;
 }
 
 .footer-copyright {
@@ -980,21 +986,37 @@ img {
   margin: 0;
   margin-right: 150px;
   padding: 0;
+  padding-top: 37px;
 
 }
 
 .footer-social {
-  width: 230px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 130px;
   margin: 0;
-  margin-right: 20px;
+  margin-right: 120px;
   padding: 0;
+  padding-top: 35px;
   list-style: none;
 }
 
-.footer-social a {
+.footer-social .social-button {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
   color: #ffffff;
   background-color: #212a3a;
 }
+
+.social-button svg {
+  margin: auto;
+}
+/* Для svg-изображений тут нужно прописывать ширину и высоту? Или их ограничит <a>, в которых они лежат? Тут, как я понимаю, их можно было
+вставить как фон, потому что не нужно менять им цвет. Я просто хотела попробовать такой способ */
 
 .footer-social a:hover,
 .footer-social a:active {
@@ -1004,16 +1026,19 @@ img {
 .footer-feedback {
   width: 140px;
   margin: 0;
-  margin-right: 40px;
   padding: 0;
+  padding-top: 37px;
 }
 
 .studio {
   width: 140px;
   margin: 0;
+  margin-left: 20px;;
   padding: 0;
+  padding-top: 37px;
   text-align: center;
 }
+/* Тут текст немного правее в макете. Можно, наверное, задать не text-align: center, а паддингом выровнять. Но нужно ли? */
 
 .footer-feedback a,
 .studio span {
@@ -1031,6 +1056,114 @@ img {
   text-decoration: none;
 }
 
-.modal {
-  display: none;
+
+  /*.modal {
+ display: none;
+  }*/
+
+/* В ТЗ указано, что модальные окна позиционируются относительно вьюпорта - я не знаю пока как это делается */
+
+.modal-map-container {
+  width: 940px;
+  height: 446px;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  box-shadow: 0 0 16px 8px rgba(47, 42, 43, 0.5);
 }
+/* Плохо понимаю логику задания размеров и всяких оберток таким картинкам - в html-файле указаны размеры, в css указываются размеры. Причем,
+и картинке, и контейнеру. И я не очень понимаю как сделать кнопку "закрыть" (или это ссылка должна быть) - заменить ее "крестиком" и поместить
+в верхний угол карты (и окна write-us). С помощью псевдоэлемента не получилось. Запуталась кто кому относительно спозиционирован и чьим псевдоэлементом
+будет "крестик"*/
+
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 620px;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  border-top: 7px solid #ff5358;
+  box-shadow: 0 0 16px 8px rgba(47, 42, 43, 0.5);
+}
+
+.feedback-form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 460px;
+  margin: 0 auto;
+  margin-top: 47px;
+  padding: 0;
+  list-style: none;
+}
+
+.feedback-form-item label {
+  display: block;
+  padding: 0;
+  padding-bottom: 10px;
+  margin: 0;
+
+
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.feedback-form-item input,
+.feedback-form-item input::placeholder,
+.feedback-form-item textarea {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: #a9a9a9;
+  background-color: transparent;
+
+}
+
+
+.feedback-form-item input,
+.feedback-form-item textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  width: 220px;
+  margin: 0;
+  padding: 9px 14px;
+  border: 1px solid #dee3e4;
+  border-radius: 2px;
+}
+
+.feedback-form-item input {
+  margin-bottom: 22px;
+}
+
+.feedback-form-item textarea {
+  width: 460px;
+}
+/* Нужно подгонять высоту textarea под макет? */
+
+.feedback-bottom {
+  display: block;
+  width: 620px;
+  padding: 37px 0;
+
+  margin: 0;
+  margin-top: 40px;
+  background-color: #f4f4f4;
+  outline: 2px solid #b52933;
+}
+
+.button-feedback-submit {
+  display: block;
+  width: 460px;
+  margin: 0 auto;
+  padding: 11px 0;
+
+  border-radius: 2px;
+}
+
+
