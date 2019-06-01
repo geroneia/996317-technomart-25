@@ -399,7 +399,9 @@ img {
    padding-left: 47px;
    margin-right: 10px;
 
- } {
+ }
+
+ {
  position: relative;
   width: 50px;
   padding-left: 47px;
@@ -430,6 +432,9 @@ img {
   margin: 0;
   width: 300px;
 }
+
+/* Не понимаю как управлять высотой пунктов списка .inner-page .user-navigation - блок "Равшан Джамшутович" толкает от себя "Мои заказы" и
+"Личный кабинет" вниз. Все обнулено, это именно высота <li> */
 
 .user-profile-link a {
   display: block;
