@@ -158,7 +158,7 @@ img {
   width: 100%;
   padding-left: 49px;
   padding-top: 12px;
-  padding-bottom: 12px;
+  padding-bottom: 11px;
 
   background-color: transparent;
   border: none;
@@ -188,7 +188,9 @@ img {
   display: block;
   width: 110px;
   margin: 0;
-  padding: 12px 20px;
+  padding: 0 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   background-color: #63a63e;
 }
 
@@ -417,9 +419,47 @@ img {
  fill: #32425c;
 }
 
+.inner-page .user-navigation {
+   display: flex;
+  flex-wrap: wrap;
+}
+
+.user-profile-link {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 300px;
+}
+
+.user-profile-link a {
+  display: block;
+  padding: 13px 0;
+  padding-left: 48px;
+  padding-right: 65px;
+}
+
+.icon-user,
+.icon-logout {
+  position: absolute;
+  top: 13px;
+}
+
+.icon-user {
+  left: 13px;
+}
+
+.icon-logout {
+  right: 5px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 
 .user-orders-link a,
 .user-account-link a {
+  padding: 0;
+  margin: 0;
   font-size: 16px;
   line-height: 18px;
   text-decoration: underline;
@@ -442,6 +482,7 @@ img {
 .user-navigation a:hover {
   color: #ee3643;
 }
+
 
 .user-profile-link a:hover {
   color: #000000;
@@ -893,8 +934,9 @@ img {
 }
 
 .footer-logo {
-  display: flex;
   position: absolute;
+  display: flex;
+
   top: 0;
   left: 0;
   width: 220px;
@@ -919,7 +961,6 @@ img {
   margin: 0;
   padding: 0;
   margin-left: 420px;
-  /* outline: 2px solid #518534 */
 }
 
 .footer-navigation-list li {
@@ -1006,7 +1047,7 @@ img {
   width: 240px;
   margin: 0;
   margin-right: 150px;
-  padding: 37px 0;
+  padding: 39px 0;
 
 
 }
@@ -1044,15 +1085,15 @@ img {
 .footer-feedback {
   width: 140px;
   margin: 0;
-  padding: 37px 0;
+  padding: 38px 0;
 }
 
 .studio {
-  width: 140px;
+  width: 112px;
   margin: 0;
-  margin-left: 20px;;
-  padding: 37px 0;
-  text-align: center;
+  margin-left: 20px;
+  padding: 38px 0;
+  padding-left: 28px;
 }
 /* Тут текст немного правее в макете. Можно, наверное, задать не text-align: center, а паддингом выровнять. Но нужно ли? */
 
@@ -1077,10 +1118,10 @@ img {
   position: fixed;
   left: 50%;
   top: 50%;
-  display: none;
+
   }
 .modal-map {
-
+  display: none;
 }
 
 /* В ТЗ указано, что модальные окна позиционируются относительно вьюпорта - я не знаю пока как это делается. */
@@ -1100,7 +1141,8 @@ img {
 }
 
 .modal-map-button,
-.modal-feedback-close
+.modal-feedback-close,
+.modal-cart-close
  {
   position: absolute;
   width: 21px;
@@ -1122,8 +1164,12 @@ img {
   left: 910px;
 }
 
-.modal-feedback {
+.modal-cart-close {
+  left: 590px;
+}
 
+.modal-feedback {
+  display: none;
 }
 
 .modal-feedback-close {
@@ -1139,7 +1185,7 @@ img {
   margin: 0;
   background-color: #ffffff;
   border-top: 7px solid #ff5358;
-  box-shadow: 0 0 16px 8px rgba(47, 42, 43, 0.5);
+  box-shadow: 0 20px 40px rgba(47, 42, 43, 0.75);
 }
 
 .feedback-form-wrapper {
@@ -1217,6 +1263,65 @@ img {
   padding: 11px 0;
 
   border-radius: 3px;
+}
+
+.modal-cart {
+   display: flex;
+   display: none;
+  flex-direction: column;
+  width: 620px;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  border-top: 7px solid #ff5358;
+  box-shadow: 0 20px 40px rgba(47, 42, 43, 0.75);
+}
+
+.modal-cart p {
+  position: relative;
+  padding: 0;
+  padding-top: 67px;
+  padding-left: 178px;
+  padding-bottom: 34px;
+  margin: 0;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.modal-cart .icon-in-cart {
+  position: absolute;
+  top: 50px;
+  left: 78px;
+}
+
+.modal-cart-bottom {
+  display: block;
+  width: 620px;
+  padding: 35px 0;
+
+  margin: 0;
+  margin-top: 35px;
+  background-color: #f4f4f4;
+}
+
+.button-checkout {
+ padding-top: 12px;
+ padding-bottom: 11px;
+ padding-left:  61px;
+ padding-right:  61px;
+ margin-left: 77px;
+ margin-right: 18px;
+ border-radius: 2px;
+}
+
+.button-modal-close {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left:  43px;
+  padding-right:  48px;
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 2px;
 }
 
 
