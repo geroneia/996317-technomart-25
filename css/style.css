@@ -272,7 +272,7 @@ img {
   justify-content: flex-start;
 }
 
-.main-headline  {
+.main-headline {
   display: block;
   width: 200px;
   margin: 0;
@@ -413,8 +413,6 @@ img {
   padding: 0;
 }
 
-
-
 .user-profile-link {
   position: relative;
   padding: 0;
@@ -422,7 +420,6 @@ img {
   margin-top: 46px;
   width: 300px;
 }
-
 
 .user-profile-link a {
   display: block;
@@ -448,7 +445,6 @@ img {
   background-color: transparent;
   cursor: pointer;
 }
-
 
 .user-orders-link,
 .user-account-link {
@@ -537,10 +533,10 @@ img {
   margin: 0;
   padding: 0;
 }
+
 .site-navigation li:first-child {
   margin-left: 21px;
   margin-right: 4px;
-
 }
 
 .site-navigation li:last-child {
@@ -561,7 +557,6 @@ img {
   vertical-align: middle;
   color: #ffffff;
 }
-
 
 .site-navigation a:hover {
   background-color: #293449;
@@ -690,24 +685,23 @@ img {
 .breadcrumbs li {
   position: relative;
   margin-right: 36px;
-   margin-left: 0;
+  margin-left: 0;
 }
 
 .breadcrumbs li:last-child {
   margin-right: 0;
-
 }
 /*
 .breadcrumbs li::after {
-  position: absolute;
-  content: "";
-  width: 8px;
-  height: 12px;
-  top: 2px;
-  left: -24px;
-  background-color: #ffffff;
-  background-image: url("../img/icon-right-small.svg");
-  background-position: 0 0;
+position: absolute;
+content: "";
+width: 8px;
+height: 12px;
+top: 2px;
+left: -24px;
+background-color: #ffffff;
+background-image: url("../img/icon-right-small.svg");
+background-position: 0 0;
 } */
 
 
@@ -720,16 +714,16 @@ img {
   color: #000000;
 }
 
-.icon-home a{
+.icon-home a {
   position: relative;
   padding-left: 17px;
 }
 
 .icon-home a::before {
-position: absolute;
-content: "";
-top: 3px;
-left: -2px;
+  position: absolute;
+  content: "";
+  top: 3px;
+  left: -2px;
   width: 17px;
   height: 17px;
   background-color: #ffffff;
@@ -739,7 +733,7 @@ left: -2px;
 }
 
 /* .breadcrumbs-selected::after {
-  display: none;
+display: none;
 
 } */
 /* Не понимаю как выстроить хлебные крошки. Чем должен быть "домик"? Я совсем не попадаю в размеры и не понимаю относительно чего должны позиционироваться
@@ -768,7 +762,6 @@ left: -2px;
   line-height: 30px;
   text-transform: uppercase;
   background-color: #f2f6f8;
-
 }
 
 .filters {
@@ -910,7 +903,6 @@ left: -2px;
   font-size: 17px;
   font-weight: 700;
   line-height: 18px;
-
 }
 
 .catalog-item .old-price {
@@ -954,7 +946,7 @@ left: -2px;
 }
 
 .item-adding {
-display: none;
+  display: none;
 }
 
 .pagination {
