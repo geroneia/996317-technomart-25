@@ -771,9 +771,10 @@ display: none;
 
 .filters h2 {
   margin: 0;
+  margin-bottom: 12px;
   padding: 0;
   padding-top: 9px;
-  padding-bottom: 11px;
+  padding-bottom: 10px;
   padding-left: 18px;
   font-size: 13px;
   line-height: 18px;
@@ -781,34 +782,132 @@ display: none;
   background-color: #f7f3ec;
 }
 
-.range {
-  min-height: 187px;
-  margin-top: 12px;
-  outline: 2px solid orangered;
-}
-
 .filter fieldset {
+  display: block;
   margin: 0;
+  margin-bottom: 42px;
   padding: 0;
   border: none;
+  border-top: 1px solid #e5e5e5;
+}
+/* Как задать эту полоску между фильтрами? border ведет себя стандартно для legend - располагается по центру высоты букв. Нужно сбросить какое-то
+умолчание, создать обертку и приделать border к ней или вообще иначе решить эту проблему? */
+
+.filter fieldset:first-child {
+  border-top: none;
+}
+
+.filter fieldset:nth-child(2) {
+  margin-bottom: 22px;
+}
+
+.filter fieldset:last-child {
+  margin-bottom: 0;
 }
 
 .filter legend {
   margin: 0;
+  margin-bottom: 14px;
   padding: 0;
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
+/* outline: 2px solid #00ca74; */
 }
 
-.filter ul {
+.filter-list {
   margin: 0;
   padding: 0;
   list-style: none;
   font-size: 15px;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+.filter-option {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20px;
+  padding-left: 35px;
+}
+
+.filter-price-slider {
+  box-sizing: border-box;
+  width: 220px;
+  height: 80px;
+  margin-bottom: 9px;
+  background-color: #f7f3ec;
+  border: 1px solid #f7f3ec;
+  border-radius: 3px;
+}
+
+.slider-scale {
+  margin: 39px 20px;
+  width: 180px;
+  height: 2px;
+  background-color: #d7dcde;
+}
+
+.slider-scale-fill {
+  position: relative;
+  width: 152px;
+  height: 2px;
+  background-color: #00ca74;
+}
+
+.slider-scale-fill::before,
+.slider-scale-fill::after {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 4px;
+  top: -8px;
+  left: 0;
+  background-color: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px #e0ddd8;
+}
+
+.slider-scale-fill::after {
+  left: 140px;
+}
+
+.slider-value {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slider-value span {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* Как выровнять это тире? Сейчас оно выше, чем нужно, и короче. */
+
+.slider-value  input::placeholder {
+  font: inherit;
+  font-size: 17px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.slider-min-value,
+.slider-max-value {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  width: 95px;
+  height: 38px;
+  background-color: #f7f3ec;
+  border-radius: 3px;
+  border: none;
 }
 
 .filter-input:disabled+label {
@@ -865,88 +964,183 @@ display: none;
   margin: 0;
   padding: 0;
   list-style: none;
+  font-size: 0;
 }
 
 .catalog-item {
+  position: relative;
+  display: inline-block;
   width: 218px;
-  min-height: 318px;
-  margin: 0;
-  margin-bottom: 20px;
   margin-right: 20px;
-  padding: 0;
-  border: 1px solid #e4e4e4;
+  margin-bottom: 20px;
+  line-height: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  border: 1px solid #cccccc;
 }
 
 .catalog-item:nth-child(3n) {
   margin-right: 0;
 }
 
-.catalog-item:hover {
-  border-color: transparent;
-  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+.catalog-item .flag {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 60px;
+  height: 60px;
+  text-indent: -1000px;
+  overflow: hidden;
+  z-index: 20;
 }
 
-.catalog-item a {
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 700;
-  color: #000000;
+.catalog-item .flag-new {
+  background-image: url("../img/new-flag.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
-.catalog-item-model {
+.item-adding {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 218px;
+  height: 88px;
+  padding: 42px 0;
+  background-color: #ffffff;
+  z-index: 10;
+}
+
+.catalog-item:hover .item-adding {
+  display: block;
+}
+
+.item-adding .to-cart,
+.item-adding .to-bookmarks {
+  display: block;
+  width: 129px;
+  margin: 0 auto;
+  margin-bottom: 7px;
+  padding: 8px 0;
+  background-color: #63a63e;
+  border: 3px solid #63a63e;
+  border-bottom-color: #367315;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Cuprum", arial,  sans-serif;
+  line-height: 18px;
+  text-decoration: none;
   text-transform: uppercase;
 }
 
-/* Прописала на всякий случай - там и так капсом набрано. */
-
-.catalog-item {
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 18px;
+.to-cart {
+  position: relative;
 }
 
-.catalog-item .old-price {
-  text-decoration: line-through;
-  color: #999999;
-}
-
-.catalog-item .current-price {
-  color: #ffffff;
-  background-color: #ee3643;
-}
-
-.item-adding .to-cart {
-  background-color: #63a63e;
-  box-shadow: inset 0 -3px #367315;
-}
-
-.item-adding .to-cart:hover {
+.to-cart:hover {
   background-color: #5fbb2d;
+  border-color: #5fbb2d;
+  border-bottom-color: #367315;
 }
 
-.item-adding .to-cart:active {
-  box-shadow: none;
+.to-cart:active {
   background-color: #518534;
+  border-color: #518534;
+}
+
+.to-cart::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 9px;
+  left: 11px;
+  background-image: url("../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.to-cart:hover::before,
+.to-cart:active::before {
+  opacity: 1;
 }
 
 .item-adding .to-bookmarks {
   color: #32425c;
   background-color: #ffffff;
-  border: 3px solid #63a63e;
+  border-color: #63a63e;
 }
 
-.item-adding .to-bookmarks:hover {
+.to-bookmarks:hover {
   border-color: #32425c;
 }
 
-.item-adding .to-bookmarks:active {
-  color: #32425c;
+.to-bookmarks:active {
   opacity: 0.3;
-  border-color: #c1c6ce;
 }
 
-.item-adding {
-  display: none;
+.catalog-item-image {
+  widows: 218px;
+  height: 168px;
+}
+
+.catalog-item-image img {
+  max-width: 100%;
+}
+
+.catalog-item-title {
+  min-height: 40px;
+  padding: 0 25px;
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+
+.old-price {
+  min-height: 20px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  color: #999999;
+  text-decoration: line-through;
+  text-transform: uppercase;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+    /* Если задавать размеры шрифта ровно, как в макете, по высоте блок с новой ценой не совпадает с псевдоэлементом "треугльником",
+    все перекашивается. Но в демке так, значит, такое расхождение в шрифтах допустимо?
+    Еще я не поняла как убирать старую цену так, чтобы не съезжало все вверх.  Оставить пустой div?*/
+
+.current-price {
+  position: relative;
+  width: 80px;
+  margin: 10px auto;
+  margin-top: 8px;
+  margin-bottom: 18px;
+  padding: 10px 30px;
+  color: #ffffff;
+  background-color: #ee3643;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.current-price::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  border: 20px solid #ffffff;
+  border-left-color: #ee3643;
+}
+
+.catalog-item:hover {
+  border-color: transparent;
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
 .pagination {
