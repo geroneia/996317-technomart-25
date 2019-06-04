@@ -311,7 +311,6 @@ img {
   display: inline-block;
   vertical-align: middle;
   margin: 0;
-  padding: 0;
   padding-top: 10px;
   padding-bottom: 9px;
   padding-left: 71px;
@@ -381,13 +380,6 @@ img {
   margin-right: 10px;
 }
 
-.unnoun-class {
-  position: relative;
-  width: 50px;
-  padding-left: 47px;
-  margin-right: 10px;
-}
-
 .login-link svg {
   position: absolute;
   width: 20px;
@@ -421,7 +413,7 @@ img {
   width: 300px;
 }
 
-.user-profile-link a {
+.user-profile-link .icon-user-profile {
   display: block;
   padding: 12px;
   padding-bottom: 12px;
@@ -439,8 +431,12 @@ img {
   left: 14px;
 }
 
-.icon-logout {
-  right: 4px;
+.user-profile-link .icon-logout {
+  padding: 0;
+  margin: 0;
+  width: 21px;
+  height: 17px;
+  right: 8px;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -449,6 +445,7 @@ img {
 .user-orders-link,
 .user-account-link {
   display: inline-block;
+  vertical-align: middle;
   text-align: center;
   list-style: none;
   padding: 0;
@@ -482,8 +479,6 @@ img {
   color: #32425c;
   background-color: #f1f5f7;
 }
-
-/* У ссылок "Мои заказы" и "Личный кабинет" - буквы совпадают, а подчеркивание должно быть чуть ниже. Это норм или нужно исправлять? */
 
 .user-orders-link a:hover,
 .user-account-link a:hover {
@@ -525,8 +520,6 @@ img {
   background-color: #32425c;
   box-shadow: 0 5px #293449;
 }
-/* Посмотрите, пожалуйста, такое расхождение с макетом допустимо? И такое решение. Никак не могу подогнать эти пункты. Наверное, слишком намудрила,
-не могу понять где */
 
 .site-navigation li {
   min-width: 45px;
@@ -554,7 +547,6 @@ img {
   padding-bottom: 18px;
   font-size: 17px;
   line-height: 17px;
-  vertical-align: middle;
   color: #ffffff;
 }
 
@@ -684,15 +676,15 @@ img {
 
 .breadcrumbs li {
   position: relative;
-  margin-right: 36px;
+  margin-right: 40px;
   margin-left: 0;
 }
 
 .breadcrumbs li:last-child {
   margin-right: 0;
 }
-/*
-.breadcrumbs li::after {
+
+.breadcrumbs li::before {
 position: absolute;
 content: "";
 width: 8px;
@@ -702,7 +694,11 @@ left: -24px;
 background-color: #ffffff;
 background-image: url("../img/icon-right-small.svg");
 background-position: 0 0;
-} */
+}
+
+.breadcrumbs li:first-child::before {
+  display: none;
+}
 
 
 .breadcrumbs a,
@@ -1085,7 +1081,7 @@ display: none;
 }
 
 .catalog-item-image {
-  widows: 218px;
+  width: 218px;
   height: 168px;
 }
 
