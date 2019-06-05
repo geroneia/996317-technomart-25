@@ -63,6 +63,7 @@ img {
   justify-content: flex-start;
   width: 100%;
   padding-bottom: 65px;
+  margin-bottom: 59px;
   background-color: #f3f7f9;
 /* outline: 2px solid blue; */
 }
@@ -71,6 +72,7 @@ img {
   display: flex;
   position: relative;
   width: 940px;
+  min-height: 42px;
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
@@ -78,17 +80,17 @@ img {
 
 .header-logo {
   display: flex;
-  position: absolute;
-  top: 0;
-  left: 10px;
   width: 220px;
-  height: 47px;
-  box-shadow: inset 0 -5px #b52933;
+  height: 42px;
+  box-shadow: 0 5px #b52933;
   background-color: #ee3643;
 }
 
 .header-logo img {
-  margin: auto;
+  margin-top: 3px;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .header-logo:hover,
@@ -108,8 +110,6 @@ img {
   position: relative;
   align-self: center;
   width: 270px;
-  margin-left: 220px;
-/* outline: 2px solid red; */
 }
 
 .main-search-button {
@@ -130,19 +130,6 @@ img {
   cursor: pointer;
 }
 
-.header-top input:hover+.main-search-button,
-.main-search-button:hover {
-  opacity: 1;
-}
-
-.header-top input:focus+.main-search-button {
-  background-image: url("../img/icon-search-red.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: contain;
-  opacity: 1;
-}
-
 .header-top input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -158,11 +145,26 @@ img {
 .header-top input::placeholder {
   color: #ffffff;
 }
-/* Читала где-то, что такая конструкция с плейсхолдером не везде будет работать, в частности, что нужно сделать, чтобы IE11 воспринял ее? */
+
 .header-top input:focus {
   color: #000000;
   background-color: #ffffff;
 }
+
+
+.main-search-input:hover+.main-search-button,
+.main-search-button:hover {
+  opacity: 1;
+}
+
+.main-search-input:focus+.main-search-button {
+  background-image: url("../img/icon-search-red.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  opacity: 1;
+}
+
 
 .session-menu {
   display: flex;
@@ -181,7 +183,7 @@ img {
   padding-right: 19px;
   padding-left: 21px;
   padding-top: 12px;
-  padding-bottom: 12px;
+  padding-bottom: 13px;
   background-color: #63a63e;
 }
 
@@ -198,7 +200,7 @@ img {
   position: relative;
   width: 106px;
   padding-top: 12px;
-  padding-bottom: 12px;
+  padding-bottom: 13px;
   padding-left: 44px;
 }
 
@@ -221,7 +223,7 @@ img {
   position: relative;
   width: 100px;
   padding-top: 12px;
-  padding-bottom: 12px;
+  padding-bottom: 13px;
   padding-left: 50px;
 /* outline: 2px solid red; */
 }
@@ -311,8 +313,8 @@ img {
   display: inline-block;
   vertical-align: middle;
   margin: 0;
-  padding-top: 10px;
-  padding-bottom: 9px;
+  padding-top: 8px;
+  padding-bottom: 11px;
   padding-left: 71px;
   padding-right: 50px;
   font-size: 21px;
@@ -373,6 +375,7 @@ img {
   background-color: #ffffff;
 }
 
+
 .login-link .login-link-icon {
   position: relative;
   width: 50px;
@@ -392,54 +395,80 @@ img {
   fill: #32425c;
 }
 
-.inner-page .user-navigation {
+.inner-page .user-navigation-wrapper {
   display: flex;
+  justify-content: flex-start;
   flex-wrap: wrap;
+  width: 300px;
   margin: 0;
   padding: 0;
 }
+
+.inner-page .icon-user-profile {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 193px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 46px;
+  padding-right: 5px;
+  margin: 0;
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.icon-user-profile svg {
+  position: absolute;
+  width: 20px;
+  height: 17px;
+  top: 15px;
+  left: 13px;
+
+}
+
+.login-link-icon:hover path {
+  fill: #32425c;
+}
+
+.inner-page .logout-link-icon {
+  padding-top: 15px;
+  padding-right: 9px;
+  padding-bottom: 11px;
+  padding-left: 24px;
+}
+
+
+.logout-link-icon:hover path,
+.icon-user-profile:hover path {
+  fill: #32425c;
+  background-color: #ffffff;
+}
+
+.logout-link-icon:active path,
+.icon-user-profile:active path {
+  fill: #c5c5c5;
+  background-color: #ffffff;
+}
+
+
+.inner-page .icon-user-profile:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.inner-page .icon-user-profile:active {
+  color: rgba(0, 0, 0, 0.3)
+}
+
+
 
 .user-options {
   margin: 0;
-  margin-left: 19px;
+  margin-left: 20px;
   padding: 0;
-}
-
-.user-profile-link {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  margin-top: 46px;
-  width: 300px;
-}
-
-.user-profile-link .icon-user-profile {
-  display: block;
-  padding: 12px;
-  padding-bottom: 12px;
-  padding-left: 48px;
-  padding-right: 65px;
-}
-
-.icon-user,
-.icon-logout {
-  position: absolute;
-  top: 13px;
-}
-
-.icon-user {
-  left: 14px;
-}
-
-.user-profile-link .icon-logout {
-  padding: 0;
-  margin: 0;
-  width: 21px;
-  height: 17px;
-  right: 8px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
 }
 
 .user-orders-link,
@@ -503,10 +532,10 @@ img {
   opacity: 1;
 }
 
-.user-navigation a:active {
+/* .user-navigation a:active {
   color: #000000;
   opacity: 0.3;
-}
+} */
 
 .site-navigation {
   display: flex;
@@ -558,6 +587,249 @@ img {
   opacity: 0.5;
   background-color: #1d2739;
 }
+
+.promo {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+}
+
+.products-promo,
+.other-promo {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.products-promo h3,
+.other-promo h3 {
+  padding: 0;
+  padding-left: 22px;
+  padding-top: 21px;
+  margin: 0;
+  margin-bottom: 13px;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.promo-button {
+  width: 135px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 23px;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.1)
+}
+
+.products-promo-item .flag,
+.other-promo-item .flag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  text-indent: -1000px;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.products-promo-item .flag-new,
+.other-promo-item .flag-new {
+  background-image: url("../img/new-flag.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.products-promo {
+  width: 940px;
+}
+
+
+.products-promo-item,
+.other-promo-item {
+  position: relative;
+  width: 300px;
+  height: 123px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.products-promo-item:first-child {
+  background-color: #ffbf47;
+  background-image: url("../img/icon-1.svg");
+  background-repeat: no-repeat;
+  background-position: 213px 32px;
+  background-size: 44px 65px;
+}
+
+.products-promo-item:nth-child(2) {
+  background-color: #3bbce3;
+  background-image: url("../img/icon-2.svg");
+  background-repeat: no-repeat;
+  background-position: 197px 33px;
+  background-size: 75px 61px;
+}
+
+.products-promo-item:nth-child(3) {
+  background-color: #dc91d8;
+  margin-right: 0;
+  background-image: url("../img/icon-3.svg");
+  background-repeat: no-repeat;
+  background-position: 191px 31px;
+  background-size: 78px 62px;
+}
+
+
+.slider-promo {
+  width: 620px;
+  height: 266px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.slider-promo-input {
+  display: none;
+}
+.slider-container {
+  width: 1240px;
+  height: 266px;
+  position: relative;
+}
+
+.slider-promo .controls {
+  left: 50%;
+  margin-left: -15px;
+  bottom: 30px;
+  position: absolute;
+}
+
+.slider-promo label{
+  	cursor: pointer;
+  display: inline-block;
+  position: relative;
+	height: 10px;
+	width: 10px;
+  border-radius: 50%;
+  background-color:#ffffff;
+
+}
+
+.slider-promo label:first-child {
+  margin-right: 5px;
+}
+
+.slider-promo label::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ee3643;
+}
+
+/* Не переключаются "кружочки" */
+
+.slides {
+  position: absolute;
+  width: 620px;
+  height: 266px;
+  float: left;
+  background-color: #4e4745;
+}
+
+.slides h3 {
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+  padding: 0;
+  margin-right: 0px;
+  margin-top: 23px;
+  margin-left: 24px;
+  margin-bottom: 2px;
+}
+
+.slides p {
+  padding: 0;
+  margin: 0;
+  margin-left: 24px;
+}
+
+.slider-promo .button-slider {
+  position: absolute;
+  z-index: 100;
+  top: 206px;
+  left: 25px;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  padding-left: 49px;
+  padding-right: 46px;
+  border-radius: 2px;
+}
+
+.slide-1 {
+  background-image: url("../img/bg-promo-slider-1.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+
+}
+
+.slide-2 {
+  background-image: url("../img/bg-promo-slider-2.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+
+}
+
+.slider-promo-buttons .arrow-right,
+.slider-promo-buttons .arrow-left {
+  position: absolute;
+  top: 114px;
+}
+
+.arrow-right {
+  right: 20px;
+}
+
+.arrow-left {
+  left: 25px;
+}
+
+.other-promo {
+  flex-direction: column;
+  width: 300px;
+}
+
+
+.other-promo-item:first-child {
+  background-color: #8ed78f;
+  margin-right: 0;
+  background-image: url("../img/icon-4.svg");
+  background-repeat: no-repeat;
+  background-position: 196px 26px;
+  background-size: 59px 72px;
+}
+
+.other-promo-item:last-child {
+  background-color: #ffc047;
+  margin-right: 0;
+  margin-bottom: 0;
+  background-image: url("../img/icon-5.svg");
+  background-repeat: no-repeat;
+  background-position: 191px 31px;
+  background-size: 78px 63px;
+}
+
+
 
 .index-columns {
   display: flex;
@@ -728,10 +1000,7 @@ background-position: 0 0;
   background-repeat: no-repeat;
 }
 
-/* .breadcrumbs-selected::after {
-display: none;
 
-} */
 /* Не понимаю как выстроить хлебные крошки. Чем должен быть "домик"? Я совсем не попадаю в размеры и не понимаю относительно чего должны позиционироваться
 "стрелочки" - у "домика" и текста разная высота, задать позиционирование одним правилом не получается поэтому... */
 
@@ -850,6 +1119,7 @@ display: none;
   width: 152px;
   height: 2px;
   background-color: #00ca74;
+  cursor: pointer;
 }
 
 .slider-scale-fill::before,
@@ -1185,26 +1455,24 @@ display: none;
 
 .footer-top {
   display: flex;
-  position: relative;
-  padding-left: 220px;
 }
 
 .footer-logo {
-  position: absolute;
   display: flex;
-  top: 0;
-  left: 0;
   width: 220px;
-  height: 68px;
+  height: 63px;
   text-align: center;
-  box-shadow: inset 0 -5px #b52933;
+  box-shadow: 0 5px #b52933;
   background-color: #ee3643;
 }
 
 .footer-logo img {
   width: 137px;
   height: 22px;
-  margin: auto;
+  margin-top: 22px;
+  margin-bottom: 19px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-navigation-list {
