@@ -691,6 +691,7 @@ img {
   width: 620px;
   height: 266px;
   margin-right: 20px;
+  margin-bottom: 53px;
   position: relative;
 }
 
@@ -829,13 +830,323 @@ img {
   background-size: 78px 63px;
 }
 
+.popular-products,
+.popular-manufacturers {
+  position: relative;
+}
+
+.popular-products h2,
+.popular-manufacturers h2 {
+
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 28px;
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
+  background-color: #f9f5f0;
+  }
+
+  .popular-products-button,
+  .popular-manufacturers-button {
+    position: absolute;
+    top: 25px;
+    right: 24px;
+    width: 253px;
+    padding-top: 11px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+  }
+
+  .popular-manufacturers {
+    margin-bottom: 65px;
+  }
+
+
+.popular-manufacturers-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  justify-content: flex-start;
+}
+
+.popular-manufacturers-item {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  width: 218px;
+  height: 143px;
+  border: 1px solid #ebebeb;
+}
+
+.popular-manufacturers-item:hover {
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
+.popular-manufacturers-item:active {
+  opacity: 0.3;
+  box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
+}
+
+.popular-manufacturers-item a {
+  display: block;
+}
+
+.popular-manufacturers-item .manufacturer-1 {
+  width: 126px;
+  height: 37px;
+  padding-top: 52px;
+  padding-left: 45px;
+  padding-bottom: 48px;
+  padding-right: 57px;
+}
+
+.popular-manufacturers-item .manufacturer-2 {
+  width: 123px;
+  height: 40px;
+  padding-top: 49px;
+  padding-left: 46px;
+  padding-bottom: 56px;
+  padding-right: 51px;
+}
+.popular-manufacturers-item .manufacturer-3 {
+  width: 146px;
+   height: 44px;
+  padding-top: 47px;
+  padding-left: 35px;
+  padding-bottom: 54px;
+  padding-right: 39px;
+}
+.popular-manufacturers-item .manufacturer-4 {
+  width: 200px;
+   height: 88px;
+  padding-top: 20px;
+  padding-left: 8px;
+  padding-bottom: 37px;
+  padding-right: 12px;
+}
+.popular-manufacturers-item .manufacturer-5 {
+  width: 169px;
+   height: 31px;
+  padding-top: 57px;
+  padding-left: 27px;
+  padding-bottom: 57px;
+  padding-right: 24px;
+}
+.popular-manufacturers-item .manufacturer-6 {
+  width: 121px;
+   height: 73px;
+  padding-top: 34px;
+  padding-left: 46px;
+  padding-bottom: 38px;
+  padding-right: 53px;
+}
+.popular-manufacturers-item .manufacturer-7 {
+  width: 151px;
+   height: 96px;
+  padding-top: 22px;
+  padding-left: 33px;
+  padding-bottom: 27px;
+  padding-right: 36px;
+}
+.popular-manufacturers-item .manufacturer-8 {
+  width: 204px;
+   height: 69px;
+  padding-top: 33px;
+  padding-left: 8px;
+  padding-bottom: 43px;
+  padding-right: 8px;
+}
+
+.services {
+  background-color: #f4f7f9;
+}
+/* Каким способом лучше сделать, чтобы фон этого блока тянулся, тогда как содержимое оставалось бы отцентрованным? Он сейчас внутри основного
+содержания с классом .container - центровщиком...*/
+
+.services h2 {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  padding-left: 0;
+  padding-top: 65px;
+  padding-bottom: 25px;
+  padding-right: 0px;
+  margin: 0;
+
+  text-transform: uppercase;
+}
+
+.services-brief {
+  margin: 0;
+  margin-bottom: 38px;
+  padding: 0;
+  padding-right: 540px;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+
+.services-columns {
+  display: flex;
+  justify-content: space-between;
+  /* outline: 2px solid red; */
+}
+
+.services-list {
+  position: relative;
+  width: 240px;
+  list-style: none;
+  padding: 0;
+  padding-top: 32px;
+  margin: 0;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  /* outline: 2px solid green; */
+}
+
+.services-list::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 279px;
+  background-image: url("../img/shadow.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.services-item {
+  display: block;
+  box-shadow:
+  inset 0 1px #405069,
+  inset 0 -1px #293449;
+  color: #ffffff;
+  background-color: #32425c;
+  padding-left: 22px;
+  padding-top: 15px;
+  padding-bottom: 17px;
+}
+
+.services-item:hover {
+  background-color: #293449;
+  box-shadow: none;
+}
+
+.services-item:active,
+.services-item.active {
+  color: #32425c;
+  background-color: #ffffff;
+  box-shadow: none;
+}
+
+.services-slider {
+  position: relative;
+  width: 620px;
+  /* outline: 2px solid blue; */
+
+}
+
+.services-slides {
+  position: relative;
+
+  width: 620px;
+  height: 315px;
+}
+
+.services-slide {
+  width: 620px;
+  background-color: #f4f8f9;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.services-slide h3 {
+  font-size: 36px;
+  line-height: 36px;
+  margin: 0;
+  margin-bottom: 22px;
+  padding: 0;
+  padding-top: 32px;
+  font-weight: 400;
+  color: #32425c;
+  text-transform: uppercase;
+}
+
+.services-description {
+  margin: 0;
+  padding: 0;
+
+
+  color: #32425c;
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "PT Sans", Arial, sans-serif;
+  white-space: pre-line;
+}
+
+.services-slide-1 .services-description {
+  padding-right: 327px;
+  padding-bottom: 130px;
+}
+
+
+
+.services-slide-1 {
+  z-index: 1000;
+  background-image: url("../img/bg-services-slider-1.png");
+  background-repeat: no-repeat;
+  background-position: 150px 57px;
+}
+
+.services-slide-2 .services-description {
+  padding-right: 220px;
+  padding-bottom: 110px;
+}
+
+.services-slide-2 .services-description {
+  padding-right: 220px;
+}
+
+.services-slide-2 {
+  background-image: url("../img/bg-services-slider-2.png");
+  background-repeat: no-repeat;
+  background-position: 238px 35px;
+}
+
+.services-slide-3 .services-description {
+  padding-right: 340px;
+  padding-bottom: 27px;
+}
+
+.services-slide-3 {
+  background-image: url("../img/bg-services-slider-3.png");
+  background-repeat: no-repeat;
+  background-position: 165px 32px;
+}
+
+.button-credit {
+  padding-top: 11px;
+  padding-bottom: 9px;
+  padding-left: 44px;
+  padding-right: 45px;
+  border-radius: 2px;
+  margin-bottom: 112px;
+}
 
 
 .index-columns {
   display: flex;
   justify-content: space-between;
   color: #000000;
-  padding-top: 82px;
+  padding-top: 80px;
   background-color: #ffffff;
 }
 
@@ -1240,6 +1551,7 @@ background-position: 0 0;
   margin-right: 20px;
   margin-bottom: 20px;
   line-height: 20px;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   font-weight: 700;
   text-align: center;
@@ -1247,6 +1559,14 @@ background-position: 0 0;
 }
 
 .catalog-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.popular-products .catalog-item:nth-child(3n) {
+  margin-right: 20px;
+}
+
+.popular-products .catalog-item:nth-child(4n) {
   margin-right: 0;
 }
 
@@ -1378,9 +1698,6 @@ background-position: 0 0;
   font-weight: 700;
 }
 
-    /* Если задавать размеры шрифта ровно, как в макете, по высоте блок с новой ценой не совпадает с псевдоэлементом "треугльником",
-    все перекашивается. Но в демке так, значит, такое расхождение в шрифтах допустимо?
-    Еще я не поняла как убирать старую цену так, чтобы не съезжало все вверх.  Оставить пустой div?*/
 
 .current-price {
   position: relative;
