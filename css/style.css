@@ -65,7 +65,6 @@ img {
   padding-bottom: 65px;
   margin-bottom: 59px;
   background-color: #f3f7f9;
-/* outline: 2px solid blue; */
 }
 
 .inner-page .main-header {
@@ -94,7 +93,6 @@ img {
   margin-top: 3px;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 .header-logo:hover,
@@ -155,7 +153,6 @@ img {
   background-color: #ffffff;
 }
 
-
 .main-search-input:hover+.main-search-button,
 .main-search-button:hover {
   opacity: 1;
@@ -169,7 +166,6 @@ img {
   opacity: 1;
 }
 
-
 .session-menu {
   display: flex;
   flex-wrap: wrap;
@@ -177,7 +173,6 @@ img {
   align-items: center;
   width: 450px;
   margin-left: auto;
-/* outline: 2px solid red; */
 }
 
 .order a {
@@ -229,7 +224,6 @@ img {
   padding-top: 12px;
   padding-bottom: 13px;
   padding-left: 50px;
-/* outline: 2px solid red; */
 }
 
 .shopping-bag a::before {
@@ -293,7 +287,6 @@ img {
   font-weight: 400;
   text-align: left;
   color: #ee3643;
-/* outline: 2px solid orange; */
 }
 
 .header-contacts {
@@ -302,7 +295,6 @@ img {
   padding: 0;
   padding-top: 47px;
   margin-right: 19px;
-/* outline: 2px solid orange; */
 }
 
 .contacts-phone {
@@ -325,7 +317,6 @@ img {
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
-/* outline: 2px solid orange; */
   border: 3px solid #ffffff;
 }
 
@@ -350,7 +341,6 @@ img {
   font-size: 14px;
   line-height: 24px;
   color: #32425c;
-/* outline: 2px solid orange; */
 }
 
 .user-navigation {
@@ -379,7 +369,6 @@ img {
   color: #000000;
   background-color: #ffffff;
 }
-
 
 .login-link .login-link-icon {
   position: relative;
@@ -431,7 +420,6 @@ img {
   height: 17px;
   top: 15px;
   left: 13px;
-
 }
 
 .login-link-icon:hover path {
@@ -445,7 +433,6 @@ img {
   padding-left: 24px;
 }
 
-
 .logout-link-icon:hover path,
 .icon-user-profile:hover path {
   fill: #32425c;
@@ -458,7 +445,6 @@ img {
   background-color: #ffffff;
 }
 
-
 .inner-page .icon-user-profile:hover {
   color: #000000;
   background-color: #ffffff;
@@ -467,8 +453,6 @@ img {
 .inner-page .icon-user-profile:active {
   color: rgba(0, 0, 0, 0.3)
 }
-
-
 
 .user-options {
   margin: 0;
@@ -536,11 +520,6 @@ img {
 .user-profile-link a:hover::before {
   opacity: 1;
 }
-
-/* .user-navigation a:active {
-  color: #000000;
-  opacity: 0.3;
-} */
 
 .site-navigation {
   display: flex;
@@ -630,7 +609,16 @@ img {
   padding-bottom: 10px;
   margin-left: 23px;
   border-radius: 2px;
-  background-color: rgba(0, 0, 0, 0.1)
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.promo-button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.promo-button:active {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .products-promo-item .flag,
@@ -655,7 +643,6 @@ img {
 .products-promo {
   width: 940px;
 }
-
 
 .products-promo-item,
 .other-promo-item {
@@ -691,7 +678,6 @@ img {
   background-size: 78px 62px;
 }
 
-
 .slider-promo {
   width: 620px;
   height: 266px;
@@ -703,6 +689,7 @@ img {
 .slider-promo-input {
   display: none;
 }
+
 .slider-container {
   width: 1240px;
   height: 266px;
@@ -716,15 +703,15 @@ img {
   position: absolute;
 }
 
-.slider-promo label{
-  	cursor: pointer;
+.slider-promo label::before {
+  content: "";
+  cursor: pointer;
   display: inline-block;
   position: relative;
-	height: 10px;
-	width: 10px;
+  height: 10px;
+  width: 10px;
   border-radius: 50%;
-  background-color:#ffffff;
-
+  background-color: #ffffff;
 }
 
 .slider-promo label:first-child {
@@ -743,7 +730,7 @@ img {
   background-color: #ee3643;
 }
 
-/* Не переключаются "кружочки" */
+/* Не переключаются "кружочки". Вообще не уверена, что правильно продумала слайды.*/
 
 .slides {
   position: absolute;
@@ -786,14 +773,12 @@ img {
   background-image: url("../img/bg-promo-slider-1.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
-
 }
 
 .slide-2 {
   background-image: url("../img/bg-promo-slider-2.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
-
 }
 
 .slider-promo-buttons .arrow-right,
@@ -814,7 +799,6 @@ img {
   flex-direction: column;
   width: 300px;
 }
-
 
 .other-promo-item:first-child {
   background-color: #8ed78f;
@@ -842,7 +826,6 @@ img {
 
 .popular-products h2,
 .popular-manufacturers h2 {
-
   display: block;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -854,23 +837,22 @@ img {
   line-height: 30px;
   text-transform: uppercase;
   background-color: #f9f5f0;
-  }
+}
 
-  .popular-products-button,
-  .popular-manufacturers-button {
-    position: absolute;
-    top: 25px;
-    right: 24px;
-    width: 253px;
-    padding-top: 11px;
-    padding-bottom: 10px;
-    border-radius: 2px;
-  }
+.popular-products-button,
+.popular-manufacturers-button {
+  position: absolute;
+  top: 25px;
+  right: 24px;
+  width: 253px;
+  padding-top: 11px;
+  padding-bottom: 10px;
+  border-radius: 2px;
+}
 
-  .popular-manufacturers {
-    margin-bottom: 65px;
-  }
-
+.popular-manufacturers {
+  margin-bottom: 65px;
+}
 
 .popular-manufacturers-wrapper {
   display: flex;
@@ -917,49 +899,55 @@ img {
   padding-bottom: 56px;
   padding-right: 51px;
 }
+
 .popular-manufacturers-item .manufacturer-3 {
   width: 146px;
-   height: 44px;
+  height: 44px;
   padding-top: 47px;
   padding-left: 35px;
   padding-bottom: 54px;
   padding-right: 39px;
 }
+
 .popular-manufacturers-item .manufacturer-4 {
   width: 200px;
-   height: 88px;
+  height: 88px;
   padding-top: 20px;
   padding-left: 8px;
   padding-bottom: 37px;
   padding-right: 12px;
 }
+
 .popular-manufacturers-item .manufacturer-5 {
   width: 169px;
-   height: 31px;
+  height: 31px;
   padding-top: 57px;
   padding-left: 27px;
   padding-bottom: 57px;
   padding-right: 24px;
 }
+
 .popular-manufacturers-item .manufacturer-6 {
   width: 121px;
-   height: 73px;
+  height: 73px;
   padding-top: 34px;
   padding-left: 46px;
   padding-bottom: 38px;
   padding-right: 53px;
 }
+
 .popular-manufacturers-item .manufacturer-7 {
   width: 151px;
-   height: 96px;
+  height: 96px;
   padding-top: 22px;
   padding-left: 33px;
   padding-bottom: 27px;
   padding-right: 36px;
 }
+
 .popular-manufacturers-item .manufacturer-8 {
   width: 204px;
-   height: 69px;
+  height: 69px;
   padding-top: 33px;
   padding-left: 8px;
   padding-bottom: 43px;
@@ -969,8 +957,10 @@ img {
 .services {
   background-color: #f4f7f9;
 }
+
 /* Каким способом лучше сделать, чтобы фон этого блока тянулся, тогда как содержимое оставалось бы отцентрованным? Он сейчас внутри основного
-содержания с классом .container - центровщиком...*/
+содержания с классом .container - центровщиком. То же самое в каталоге, с блоком "Пара слов о перфораторах" - нужно переназначать класс
+.contaner с body отдельно на каждый блок и добавлять тянущимся дополнительные обертки? Или есть способ проще?*/
 
 .services h2 {
   font-size: 30px;
@@ -981,7 +971,6 @@ img {
   padding-bottom: 25px;
   padding-right: 0px;
   margin: 0;
-
   text-transform: uppercase;
 }
 
@@ -995,11 +984,9 @@ img {
   line-height: 24px;
 }
 
-
 .services-columns {
   display: flex;
   justify-content: space-between;
-  /* outline: 2px solid red; */
 }
 
 .services-list {
@@ -1012,7 +999,6 @@ img {
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
-  /* outline: 2px solid green; */
 }
 
 .services-list::after {
@@ -1029,9 +1015,8 @@ img {
 
 .services-item {
   display: block;
-  box-shadow:
-  inset 0 1px #405069,
-  inset 0 -1px #293449;
+  box-shadow: inset 0 1px #405069,
+    inset 0 -1px #293449;
   color: #ffffff;
   background-color: #32425c;
   padding-left: 22px;
@@ -1054,13 +1039,10 @@ img {
 .services-slider {
   position: relative;
   width: 620px;
-  /* outline: 2px solid blue; */
-
 }
 
 .services-slides {
   position: relative;
-
   width: 620px;
   height: 315px;
 }
@@ -1088,8 +1070,6 @@ img {
 .services-description {
   margin: 0;
   padding: 0;
-
-
   color: #32425c;
   font-size: 13px;
   line-height: 24px;
@@ -1101,8 +1081,6 @@ img {
   padding-right: 327px;
   padding-bottom: 130px;
 }
-
-
 
 .services-slide-1 {
   z-index: 1000;
@@ -1145,7 +1123,6 @@ img {
   border-radius: 2px;
   margin-bottom: 112px;
 }
-
 
 .index-columns {
   display: flex;
@@ -1274,21 +1251,20 @@ img {
 }
 
 .breadcrumbs li::before {
-position: absolute;
-content: "";
-width: 8px;
-height: 12px;
-top: 2px;
-left: -24px;
-background-color: #ffffff;
-background-image: url("../img/icon-right-small.svg");
-background-position: 0 0;
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 12px;
+  top: 2px;
+  left: -24px;
+  background-color: #ffffff;
+  background-image: url("../img/icon-right-small.svg");
+  background-position: 0 0;
 }
 
 .breadcrumbs li:first-child::before {
   display: none;
 }
-
 
 .breadcrumbs a,
 .breadcrumbs a:hover,
@@ -1316,10 +1292,6 @@ background-position: 0 0;
   background-position: 0 0;
   background-repeat: no-repeat;
 }
-
-
-/* Не понимаю как выстроить хлебные крошки. Чем должен быть "домик"? Я совсем не попадаю в размеры и не понимаю относительно чего должны позиционироваться
-"стрелочки" - у "домика" и текста разная высота, задать позиционирование одним правилом не получается поэтому... */
 
 .catalog-columns {
   display: flex;
@@ -1349,7 +1321,6 @@ background-position: 0 0;
 .filters {
   width: 220px;
 }
-/* Нужно будет добавить отступ справа */
 
 .filters h2 {
   margin: 0;
@@ -1363,10 +1334,6 @@ background-position: 0 0;
   text-transform: uppercase;
   background-color: #f7f3ec;
 }
-
-
-
-
 
 .filter fieldset {
   display: block;
@@ -1383,7 +1350,7 @@ background-position: 0 0;
 }
 
 .filter fieldset:nth-child(2) {
-    padding-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 .filter fieldset:last-child {
@@ -1398,7 +1365,6 @@ background-position: 0 0;
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
-/* outline: 2px solid #00ca74; */
 }
 
 .filter-list {
@@ -1421,11 +1387,11 @@ background-position: 0 0;
   opacity: 0;
 }
 
-.filter-input + label {
+.filter-input+label {
   position: relative;
 }
 
-.filter-input-checkbox + label::before {
+.filter-input-checkbox+label::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1437,15 +1403,15 @@ background-position: 0 0;
   height: 23px;
 }
 
-.filter-input-checkbox:checked + label::before {
+.filter-input-checkbox:checked+label::before {
   background-image: url("../img/checkbox-on.svg");
 }
 
-.filter-input-checkbox:focus + label::before {
+.filter-input-checkbox:focus+label::before {
   box-shadow: 0px 0px 4px 0px #4D90FE;
 }
 
-.filter-input-radio + label::before {
+.filter-input-radio+label::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1457,11 +1423,11 @@ background-position: 0 0;
   height: 25px;
 }
 
-.filter-input-radio:checked + label::before {
+.filter-input-radio:checked+label::before {
   background-image: url("../img/radio-on.svg");
 }
 
-.filter-input-radio:focus + label::before {
+.filter-input-radio:focus+label::before {
   box-shadow: 0px 0px 4px 0px #4D90FE;
   border-radius: 50%;
 }
@@ -1525,7 +1491,7 @@ background-position: 0 0;
   margin-bottom: 10px;
 }
 
-.slider-value  input::placeholder {
+.slider-value input::placeholder {
   font: inherit;
   font-size: 17px;
   line-height: 18px;
@@ -1569,12 +1535,12 @@ background-position: 0 0;
   border-radius: 2px;
 }
 
-  .sorting {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 700px;
+.sorting {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 700px;
   margin-bottom: 20px;
   min-height: 38px;
   background-color: #f7f3ec;
@@ -1588,7 +1554,6 @@ background-position: 0 0;
   line-height: 18px;
   text-transform: uppercase;
   width: 84px;
-
 }
 
 .sorting-list {
@@ -1609,21 +1574,18 @@ background-position: 0 0;
 }
 
 .sorting-list a:hover {
-
   opacity: 1;
   text-decoration-style: solid;
 }
 
-
 .sorting-item-active a {
-
   opacity: 1;
   text-decoration: none;
   color: #ee3643;
 }
 
 /* Не понимаю что не так с размером шрифта в пунктах сортировки: если смотреть код в браузере, он отображается как верный   font-size: 13px;
-  line-height: 18px; однако зрительно в браузере они меньше...*/
+line-height: 18px; однако зрительно в браузере они меньше...*/
 
 .sorting-item-active path {
   fill: #ee3643;
@@ -1650,8 +1612,6 @@ background-position: 0 0;
   top: 14px;
   right: 16px;
 }
-
-
 
 .catalog-item {
   position: relative;
@@ -1726,7 +1686,7 @@ background-position: 0 0;
   color: #ffffff;
   font-size: 14px;
   font-weight: 400;
-  font-family: "Cuprum", arial,  sans-serif;
+  font-family: "Cuprum", arial, sans-serif;
   line-height: 18px;
   text-decoration: none;
   text-transform: uppercase;
@@ -1807,7 +1767,6 @@ background-position: 0 0;
   font-weight: 700;
 }
 
-
 .current-price {
   position: relative;
   width: 80px;
@@ -1853,7 +1812,6 @@ background-position: 0 0;
   padding-right: 16px;
   padding-bottom: 10px;
   padding-left: 15px;
-
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1875,7 +1833,7 @@ background-position: 0 0;
   border: 1px solid #ee3643;
 }
 
-.pagination-item-current a{
+.pagination-item-current a {
   color: #ffffff;
   background-color: #ee3643;
   border: 1px solid #ee3643;
@@ -2012,8 +1970,6 @@ background-position: 0 0;
   padding-left: 59px;
   color: #ffd180;
 }
-/* В курсе говорилось о том, что флекс элементы должны иметь заданную ширину или высоту. Тут разные по ширине пункты,
-я задала минимальную по слову "Техника". Надеюсь, правильно */
 
 .footer-navigation-list a:hover,
 .catalog-menu a:hover {
@@ -2088,7 +2044,6 @@ background-position: 0 0;
   padding: 37px 0;
   padding-left: 28px;
 }
-/* Тут текст немного правее в макете. Можно, наверное, задать не text-align: center, а паддингом выровнять. Но нужно ли? */
 
 .footer-feedback a,
 .studio span {
@@ -2234,7 +2189,6 @@ background-position: 0 0;
   width: 460px;
   padding-bottom: 15px;
 }
-/* Вообще как подгоняют высоту textarea под макет? */
 
 .feedback-bottom {
   display: block;
@@ -2267,6 +2221,9 @@ background-position: 0 0;
   box-shadow: 0 20px 40px rgba(47, 42, 43, 0.75);
 }
 
+.modal-cart {
+  display: none;
+}
 
 .modal-cart p {
   position: relative;

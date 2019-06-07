@@ -85,19 +85,20 @@
 
         <div class="slider-container">
           <div class="slides slide-1">
-            <input type="radio" name="point" id="slide-1" class="slider-promo-input">
+
             <h3>Перфораторы</h3>
             <p>Настоящие мужские игрушки</p>
           </div>
           <div class="slides slide-2">
-            <input type="radio" name="point" id="slide-2" class="slider-promo-input" checked>
             <h3>Дрели</h3>
             <p>Соседям на радость!</p>
           </div>
 
         </div>
         <div class="controls">
+          <input type="radio" name="point" id="slide-1" class="slider-promo-input">
           <label for="slide-1"></label>
+          <input type="radio" name="point" id="slide-2" class="slider-promo-input" checked>
           <label for="slide-2"></label>
         </div>
         <div class="slider-promo-buttons">
@@ -124,7 +125,6 @@
           <a class="button promo-button">Бесплатно</a>
         </li>
       </ul>
-    </div>
     </div>
     <section class="popular-products">
       <h2>Популярные товары:</h2>
@@ -362,8 +362,6 @@
     </form>
     <button class="button modal-feedback-close" type="button" aria-label="Закрыть окно сообщения">Закрыть</button>
   </section>
-  <!-- Не перепутают кнопки свои функции, если использовать дополнительные оберткки? Не знаю как иначе сделать серую полосу внизу модального окна,
-  на фоне которой кнопка -->
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
     <p class="modal-map-container">
