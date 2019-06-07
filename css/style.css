@@ -68,6 +68,10 @@ img {
 /* outline: 2px solid blue; */
 }
 
+.inner-page .main-header {
+  margin-bottom: 0;
+}
+
 .header-top-wrapper {
   display: flex;
   position: relative;
@@ -286,6 +290,7 @@ img {
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
+  font-weight: 400;
   text-align: left;
   color: #ee3643;
 /* outline: 2px solid orange; */
@@ -1253,7 +1258,8 @@ img {
   justify-content: flex-start;
   flex-wrap: wrap;
   padding: 0;
-  margin: 21px 0;
+  margin-top: 20px;
+  margin-bottom: 21px;
   list-style: none;
 }
 
@@ -1358,23 +1364,26 @@ background-position: 0 0;
   background-color: #f7f3ec;
 }
 
+
+
+
+
 .filter fieldset {
   display: block;
   margin: 0;
-  margin-bottom: 42px;
+  margin-bottom: 18px;
   padding: 0;
+  padding-bottom: 24px;
   border: none;
-  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
 }
-/* Как задать эту полоску между фильтрами? border ведет себя стандартно для legend - располагается по центру высоты букв. Нужно сбросить какое-то
-умолчание, создать обертку и приделать border к ней или вообще иначе решить эту проблему? */
 
-.filter fieldset:first-child {
-  border-top: none;
+.filter fieldset:nth-child(3) {
+  border-bottom: 0;
 }
 
 .filter fieldset:nth-child(2) {
-  margin-bottom: 22px;
+    padding-bottom: 0px;
 }
 
 .filter fieldset:last-child {
@@ -1405,7 +1414,56 @@ background-position: 0 0;
   margin: 0;
   padding: 0;
   padding-bottom: 20px;
-  padding-left: 35px;
+  padding-left: 18px;
+}
+
+.filter-input {
+  opacity: 0;
+}
+
+.filter-input + label {
+  position: relative;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -35px;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 23px;
+  height: 23px;
+}
+
+.filter-input-checkbox:checked + label::before {
+  background-image: url("../img/checkbox-on.svg");
+}
+
+.filter-input-checkbox:focus + label::before {
+  box-shadow: 0px 0px 4px 0px #4D90FE;
+}
+
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -35px;
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 25px;
+  height: 25px;
+}
+
+.filter-input-radio:checked + label::before {
+  background-image: url("../img/radio-on.svg");
+}
+
+.filter-input-radio:focus + label::before {
+  box-shadow: 0px 0px 4px 0px #4D90FE;
+  border-radius: 50%;
 }
 
 .filter-price-slider {
@@ -1460,11 +1518,12 @@ background-position: 0 0;
   padding: 0;
 }
 
-.slider-value span {
-  display: inline-block;
-  vertical-align: middle;
+.slider-value p {
+  font-size: 16px;
+  line-height: 18px;
+  margin-top: 9px;
+  margin-bottom: 10px;
 }
-/* Как выровнять это тире? Сейчас оно выше, чем нужно, и короче. */
 
 .slider-value  input::placeholder {
   font: inherit;
@@ -1487,18 +1546,35 @@ background-position: 0 0;
   border: none;
 }
 
+.slider-min-value {
+  padding-left: 4px;
+}
+
 .filter-input:disabled+label {
   color: #000000;
   opacity: 0.5;
 }
 
-.filter .button {
+.filter-button {
+  margin-top: 18px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 37px;
+  padding-right: 38px;
+  font-size: 13px;
+  line-height: 18px;
   color: #000000;
   background-color: #ffffff;
   border: 1px solid #e5e5e5;
+  border-radius: 2px;
 }
 
-.sorting {
+  .sorting {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 700px;
   margin-bottom: 20px;
   min-height: 38px;
   background-color: #f7f3ec;
@@ -1506,17 +1582,26 @@ background-position: 0 0;
 
 .sorting h3 {
   margin: 0;
-  padding: 0;
+  padding-left: 19px;
+  padding-top: 9px;
+  font-size: 13px;
+  line-height: 18px;
   text-transform: uppercase;
+  width: 84px;
+
 }
 
 .sorting-list {
+  display: flex;
+  width: 460px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .sorting-list a {
+  font-size: 13px;
+  line-height: 18px;
   color: #000000;
   opacity: 0.3;
   text-decoration: underline #ee3643;
@@ -1524,14 +1609,24 @@ background-position: 0 0;
 }
 
 .sorting-list a:hover {
+
   opacity: 1;
   text-decoration-style: solid;
 }
 
+
 .sorting-item-active a {
+
   opacity: 1;
   text-decoration: none;
   color: #ee3643;
+}
+
+/* Не понимаю что не так с размером шрифта в пунктах сортировки: если смотреть код в браузере, он отображается как верный   font-size: 13px;
+  line-height: 18px; однако зрительно в браузере они меньше...*/
+
+.sorting-item-active path {
+  fill: #ee3643;
 }
 
 .catalog-list {
@@ -1543,6 +1638,20 @@ background-position: 0 0;
   list-style: none;
   font-size: 0;
 }
+
+.sorting-item-up svg {
+  position: absolute;
+  top: 14px;
+  right: 49px;
+}
+
+.sorting-item-down svg {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+}
+
+
 
 .catalog-item {
   position: relative;
@@ -1727,15 +1836,35 @@ background-position: 0 0;
 }
 
 .pagination {
+  padding: 0;
+  padding-top: 27px;
   list-style: none;
+  margin-bottom: 70px;
+}
+
+.pagination-item {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
 }
 
 .pagination a {
+  padding-top: 9px;
+  padding-right: 16px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
   color: #000000;
   border: 1px solid #e5e5e5;
+  border-radius: 2px;
+}
+
+.pagination-item-next a {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .pagination a:hover {
@@ -1746,9 +1875,32 @@ background-position: 0 0;
   border: 1px solid #ee3643;
 }
 
-.pagination-item-current {
+.pagination-item-current a{
+  color: #ffffff;
   background-color: #ee3643;
   border: 1px solid #ee3643;
+}
+
+.catalog-description {
+  background-color: #f2f6f8;
+}
+
+.catalog-description h2 {
+  margin: 0;
+  padding: 0;
+  padding-top: 65px;
+  margin-bottom: 26px;
+  font-size: 30px;
+  line-height: 30px;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.catalog-description p {
+  font-size: 13px;
+  line-height: 24px;
+  margin: 0;
 }
 
 .main-footer {
@@ -1759,6 +1911,10 @@ background-position: 0 0;
   padding: 0;
   color: #ffffff;
   background-color: #32425c;
+}
+
+.inner-page .main-footer {
+  margin-top: 68px;
 }
 
 .footer-top,
@@ -1951,13 +2107,16 @@ background-position: 0 0;
 }
 
 .modal {
+  display: none;
   position: fixed;
   left: 50%;
   top: 50%;
 }
 
 .modal-map {
-  display: none;
+  margin-left: -470px;
+  margin-top: -260px;
+  z-index: 1000;
 }
 
 .modal-map-container {
@@ -2003,7 +2162,9 @@ background-position: 0 0;
 }
 
 .modal-feedback {
-  display: none;
+  margin-left: -310px;
+  margin-top: -200px;
+  z-index: 1100;
 }
 
 .modal-feedback-close {
@@ -2094,15 +2255,18 @@ background-position: 0 0;
 
 .modal-cart {
   display: flex;
-  display: none;
   flex-direction: column;
+  z-index: 700;
+  top: 405px;
   width: 620px;
   padding: 0;
   margin: 0;
+  margin-left: -310px;
   background-color: #ffffff;
   border-top: 7px solid #ff5358;
   box-shadow: 0 20px 40px rgba(47, 42, 43, 0.75);
 }
+
 
 .modal-cart p {
   position: relative;
