@@ -96,10 +96,10 @@
 
         </div>
         <div class="controls">
-          <input type="radio" name="point" id="slide-1" class="slider-promo-input">
-          <label for="slide-1"></label>
-          <input type="radio" name="point" id="slide-2" class="slider-promo-input" checked>
-          <label for="slide-2"></label>
+          <input type="radio" name="point" id="slide-1" class="slider-promo-input input-slide-1">
+          <label for="slide-1" class="point-left"></label>
+          <input type="radio" name="point" id="slide-2" class="slider-promo-input input-slide-2" checked>
+          <label for="slide-2" class="point-right"></label>
         </div>
         <div class="slider-promo-buttons">
           <a class="arrow-right" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="40"
@@ -225,9 +225,9 @@
         Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
       <div class="services-columns">
         <ul class="services-list">
-          <li class="services-item delivery active">Доставка</li>
-          <li class="services-item warranty">Гарантия</li>
-          <li class="services-item credit">Кредит</li>
+          <li><a class="services-item delivery active">Доставка</a></li>
+          <li><a class="services-item warranty">Гарантия</a></li>
+          <li><a class="services-item credit">Кредит</a></li>
         </ul>
         <div class="services-slider">
           <div class="services-slides">
@@ -374,6 +374,17 @@
       <button class="button modal-map-button" type="button" aria-label="Закрыть карту">Закрыть</button>
     </p>
   </section>
+  <div class="modal modal-cart">
+    <img src="img/icon-mark.svg" width="66" height="66" alt="" class="icon-in-cart">
+    <p class="message">
+      Товар добавлен в корзину!
+    </p>
+    <div class="modal-cart-bottom">
+      <button class="button button-checkout" type="button">Оформить заказ</button>
+      <button class="button button-modal-close">Продолжить покупки</button>
+    </div>
+    <button class="modal-cart-close" aria-label="Закрыть окно сообщения">Закрыть</button>
+  </div>
   <script src="./js/script.js"></script>
 </body>
 

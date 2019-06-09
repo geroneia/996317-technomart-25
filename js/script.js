@@ -70,3 +70,88 @@ window.addEventListener("keydown", function (evt) {
 // почему-то этот код, относящийся к сообщению о добавлении в корзину, отлично работает в консоли инструменов разработчика и совсем не работает,
 //  когда его же, без изменений, переносишь сюда
 
+var checkbox = document.querySelector("input[type=radio]");
+var promoSlide = document.querySelector(".slides");
+checkbox.addEventListener('change', function () {
+  if (this.checked) {
+    promoSlide.classList.add("slide-active");
+  }
+});
+
+// получается только включить левый слайд. я пробовала находить через querySelectirAll, перебирать массив и у элемента с индексом
+// [i] запускать addEventLustener, чтобы элементу с тем же индексом из массива слайдов задать нужный класс - но не сработало. может,
+// тут вообще элементы управления - только "стрелки" и вместо радиобаттон обычные div?
+
+var arrowRight = document.querySelector(".arrow-right");
+var promoSlideRight = document.querySelector(".slide-2");
+var arrowLeft = document.querySelector(".arrow-left");
+var promoSlideLeft = document.querySelector(".slide-1");
+arrowRight.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  console.log("нажата правая стрелка");
+  promoSlideRight.classList.add("slide-active");
+  if (promoSlideLeft.classList.contains("slide-active")) {
+    promoSlideLeft.classList.remove("slide-active");
+  }
+});
+arrowLeft.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  console.log("нажата левая стрелка");
+  promoSlideLeft.classList.add("slide-active");
+  if (promoSlideRight.classList.contains("slide-active")) {
+    promoSlideRight.classList.remove("slide-active");
+  }
+});
+
+
+var serviceDelivery = document.querySelector(".delivery");
+var slideDelivery = document.querySelector(".services-slide-1");
+var serviceWarranty = document.querySelector(".warranty");
+var slideWarranty = document.querySelector(".services-slide-2");
+var serviceCredit = document.querySelector(".credit");
+var slideCredit = document.querySelector(".services-slide-3");
+serviceWarranty.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  slideWarranty.classList.add("services-slide-active");
+  serviceWarranty.classList.add("active");
+  if (serviceDelivery.classList.contains("active")) {
+    serviceDelivery.classList.remove("active");
+  } else if (serviceCredit.classList.contains("active")) {
+    serviceCredit.classList.remove("active");
+  }
+  if (slideDelivery.classList.contains("services-slide-active")) {
+    slideDelivery.classList.remove("services-slide-active");
+  } else if (slideCredit.classList.contains("services-slide-active")) {
+    slideCredit.classList.remove("services-slide-active");
+  }
+});
+serviceDelivery.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  slideDelivery.classList.add("services-slide-active");
+  serviceDelivery.classList.add("active");
+  if (serviceWarranty.classList.contains("active")) {
+    serviceWarranty.classList.remove("active");
+  } else if (serviceCredit.classList.contains("active")) {
+    serviceCredit.classList.remove("active");
+  }
+  if (slideWarranty.classList.contains("services-slide-active")) {
+    slideWarranty.classList.remove("services-slide-active");
+  } else if (slideCredit.classList.contains("services-slide-active")) {
+    slideCredit.classList.remove("services-slide-active");
+  }
+});
+serviceCredit.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  slideCredit.classList.add("services-slide-active");
+  serviceCredit.classList.add("active");
+  if (serviceDelivery.classList.contains("active")) {
+    serviceDelivery.classList.remove("active");
+  } else if (serviceWarranty.classList.contains("active")) {
+    serviceWarranty.classList.remove("active");
+  }
+  if (slideDelivery.classList.contains("services-slide-active")) {
+    slideDelivery.classList.remove("services-slide-active");
+  } else if (slideWarranty.classList.contains("services-slide-active")) {
+    slideWarranty.classList.remove("services-slide-active");
+  }
+});
