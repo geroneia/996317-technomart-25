@@ -2068,20 +2068,33 @@ line-height: 18px; однако зрительно в браузере они м
   top: 50%;
 }
 
+
 .modal-map {
   margin-left: -470px;
   margin-top: -260px;
   z-index: 1000;
 }
 
+.map-show {
+  display: block;
+}
+
 .modal-map-container {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 940px;
   height: 446px;
   padding: 0;
   margin: 0;
   background-color: #ffffff;
   box-shadow: 0 0 16px 8px rgba(47, 42, 43, 0.5);
+}
+
+.modal-map iframe {
+  position: relative;
+  z-index: 1002;
+  border: none;
 }
 
 .modal-map-container img {
@@ -2112,6 +2125,8 @@ line-height: 18px; однако зрительно в браузере они м
   left: 910px;
 }
 
+
+
 .modal-cart-close {
   left: 590px;
 }
@@ -2125,6 +2140,10 @@ line-height: 18px; однако зрительно в браузере они м
 .modal-feedback-close {
   top: 17px;
   left: 590px;
+}
+
+.modal-feedback-show {
+  display: flex;
 }
 
 .feedback-form {
@@ -2207,8 +2226,11 @@ line-height: 18px; однако зрительно в браузере они м
   border-radius: 3px;
 }
 
-.modal-cart {
+.modal-cart-show {
   display: flex;
+}
+
+.modal-cart {
   flex-direction: column;
   z-index: 700;
   top: 405px;
@@ -2221,9 +2243,8 @@ line-height: 18px; однако зрительно в браузере они м
   box-shadow: 0 20px 40px rgba(47, 42, 43, 0.75);
 }
 
-.modal-cart {
-  display: none;
-}
+
+
 
 .modal-cart p {
   position: relative;
