@@ -67,9 +67,6 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-// почему-то этот код, относящийся к сообщению о добавлении в корзину, отлично работает в консоли инструменов разработчика и совсем не работает,
-//  когда его же, без изменений, переносишь сюда
-
 var checkbox = document.querySelector("input[type=radio]");
 var promoSlide = document.querySelector(".slides");
 checkbox.addEventListener('change', function () {
