@@ -152,10 +152,12 @@ img {
   box-sizing: border-box;
   width: 100%;
   padding-left: 48px;
-  padding-top: 10px;
-  padding-bottom: 11px;
+  padding-top: 9px;
+  padding-bottom: 10px;
   background-color: transparent;
   border: none;
+  border-top: 2px solid #293449;
+  border-bottom: 2px solid #293449;
 }
 
 .header-top input::-webkit-input-placeholder {
@@ -177,7 +179,8 @@ img {
 .header-top input:focus {
   color: #000000;
   background-color: #ffffff;
-  border: none;
+  border-bottom: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
 }
 
 .main-search-input:hover+.main-search-button,
