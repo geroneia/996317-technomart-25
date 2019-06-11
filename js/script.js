@@ -76,7 +76,6 @@ var promoSlideLeft = document.querySelector(".slide-1");
 var dotLeft = document.querySelector(".dot-left");
 arrowRight.addEventListener("click", function (evt) {
   evt.preventDefault();
-  console.log("нажата правая стрелка");
   promoSlideRight.classList.add("slide-active");
   dotRight.classList.add("dot-active");
   if (promoSlideLeft.classList.contains("slide-active")) {
@@ -88,16 +87,32 @@ arrowRight.addEventListener("click", function (evt) {
 });
 arrowLeft.addEventListener("click", function (evt) {
   evt.preventDefault();
-  console.log("нажата левая стрелка");
   promoSlideLeft.classList.add("slide-active");
   dotLeft.classList.add("dot-active");
-  console.log("Эй левая точка");
   if (promoSlideRight.classList.contains("slide-active")) {
     promoSlideRight.classList.remove("slide-active");
   }
   if (dotRight.classList.contains("dot-active")) {
     dotRight.classList.remove("dot-active");
   }
+});
+dotRight.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  promoSlideRight.classList.add("slide-active");
+  dotRight.classList.add("dot-active");
+  dotLeft.classList.remove("dot-active");
+  if (promoSlideLeft.classList.contains("slide-active")) {
+    promoSlideLeft.classList.remove("slide-active");
+  };
+});
+dotLeft.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  promoSlideLeft.classList.add("slide-active");
+  dotLeft.classList.add("dot-active");
+  dotRight.classList.remove("dot-active");
+  if (promoSlideRight.classList.contains("slide-active")) {
+    promoSlideRight.classList.remove("slide-active");
+  };
 });
 
 var servicesItems = document.querySelectorAll(".services-item");

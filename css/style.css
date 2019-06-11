@@ -178,6 +178,7 @@ img {
 .header-top input:focus {
   color: #000000;
   background-color: #ffffff;
+  border:none;
 }
 
 .main-search-input:hover+.main-search-button,
@@ -602,7 +603,7 @@ img {
 }
 
 .site-navigation li:last-child {
-  margin-right: 23px;
+  margin-right: 21px;
   margin-left: 3px;
 }
 
