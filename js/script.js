@@ -119,12 +119,16 @@ var servicesItems = document.querySelectorAll(".services-item");
 var servicesSlides = document.querySelectorAll(".services-slide");
 var slidesSwitcher = function (item, slide) {
   item.addEventListener("click", function (evt) {
-    servicesItems.forEach(function (el) {
-      el.classList.remove("active")
-    });
-    servicesSlides.forEach(function (el) {
-      el.classList.remove("services-slide-active")
-    });
+    for (var j = 0; j < servicesItems.length; j++) {
+      servicesItems[j].classList.remove("active");
+      servicesSlides[j].classList.remove("services-slide-active");
+    };
+    // servicesItems.forEach(function (el) {
+    //   el.classList.remove("active")
+    // });
+    // servicesSlides.forEach(function (el) {
+    //   el.classList.remove("services-slide-active")
+    // });
     evt.preventDefault();
 
     slide.classList.add("services-slide-active");
