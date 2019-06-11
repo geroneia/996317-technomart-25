@@ -759,7 +759,7 @@ img {
   display: none;
 }
 
-.slider-promo .controls {
+.slider-promo .control-dots {
   z-index: 2;
   left: 50%;
   margin-left: -15px;
@@ -767,7 +767,7 @@ img {
   position: absolute;
 }
 
-.controls label {
+.dot {
   display: inline-block;
   width: 6px;
   height: 6px;
@@ -776,11 +776,11 @@ img {
   border-radius: 50%;
 }
 
-.slider-promo-input:checked+label {
+.dot-active {
   background-color: #ee3643;
 }
 
-.controls .point-right {
+.dot-right {
   margin-left: 6px;
 }
 

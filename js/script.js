@@ -67,88 +67,100 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-var checkbox = document.querySelector("input[type=radio]");
-var promoSlide = document.querySelector(".slides");
-checkbox.addEventListener('change', function () {
-  if (this.checked) {
-    promoSlide.classList.add("slide-active");
-  }
-});
-
-// получается только включить левый слайд. я пробовала находить через querySelectirAll, перебирать массив и у элемента с индексом
-// [i] запускать addEventLustener, чтобы элементу с тем же индексом из массива слайдов задать нужный класс - но не сработало. может,
-// тут вообще элементы управления - только "стрелки" и вместо радиобаттон обычные div?
 
 var arrowRight = document.querySelector(".arrow-right");
 var promoSlideRight = document.querySelector(".slide-2");
+var dotRight = document.querySelector(".dot-right");
 var arrowLeft = document.querySelector(".arrow-left");
 var promoSlideLeft = document.querySelector(".slide-1");
+var dotLeft = document.querySelector(".dot-left");
 arrowRight.addEventListener("click", function (evt) {
   evt.preventDefault();
   console.log("нажата правая стрелка");
   promoSlideRight.classList.add("slide-active");
+  dotRight.classList.add("dot-active");
   if (promoSlideLeft.classList.contains("slide-active")) {
     promoSlideLeft.classList.remove("slide-active");
+  }
+  if (dotLeft.classList.contains("dot-active")) {
+    dotLeft.classList.remove("dot-active");
   }
 });
 arrowLeft.addEventListener("click", function (evt) {
   evt.preventDefault();
   console.log("нажата левая стрелка");
   promoSlideLeft.classList.add("slide-active");
+  dotLeft.classList.add("dot-active");
+  console.log("Эй левая точка");
   if (promoSlideRight.classList.contains("slide-active")) {
     promoSlideRight.classList.remove("slide-active");
   }
+  if (dotRight.classList.contains("dot-active")) {
+    dotRight.classList.remove("dot-active");
+  }
 });
 
+var servicesItems = document.querySelectorAll(".services-item");
+var servicesSlides = document.querySelectorAll(".services-slide");
+var slidesSwitcher = function (item, slide) {
+  item.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    slide.classList.add("services-slide-active");
+    item.classList.add("active");
+  });
+};
+for(var i = 0; i <servicesItems.length; i++) {
+slidesSwitcher(servicesItems[i], servicesSlides[i]);
+};
 
-var serviceDelivery = document.querySelector(".delivery");
-var slideDelivery = document.querySelector(".services-slide-1");
-var serviceWarranty = document.querySelector(".warranty");
-var slideWarranty = document.querySelector(".services-slide-2");
-var serviceCredit = document.querySelector(".credit");
-var slideCredit = document.querySelector(".services-slide-3");
-serviceWarranty.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  slideWarranty.classList.add("services-slide-active");
-  serviceWarranty.classList.add("active");
-  if (serviceDelivery.classList.contains("active")) {
-    serviceDelivery.classList.remove("active");
-  } else if (serviceCredit.classList.contains("active")) {
-    serviceCredit.classList.remove("active");
-  }
-  if (slideDelivery.classList.contains("services-slide-active")) {
-    slideDelivery.classList.remove("services-slide-active");
-  } else if (slideCredit.classList.contains("services-slide-active")) {
-    slideCredit.classList.remove("services-slide-active");
-  }
-});
-serviceDelivery.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  slideDelivery.classList.add("services-slide-active");
-  serviceDelivery.classList.add("active");
-  if (serviceWarranty.classList.contains("active")) {
-    serviceWarranty.classList.remove("active");
-  } else if (serviceCredit.classList.contains("active")) {
-    serviceCredit.classList.remove("active");
-  }
-  if (slideWarranty.classList.contains("services-slide-active")) {
-    slideWarranty.classList.remove("services-slide-active");
-  } else if (slideCredit.classList.contains("services-slide-active")) {
-    slideCredit.classList.remove("services-slide-active");
-  }
-});
-serviceCredit.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  slideCredit.classList.add("services-slide-active");
-  serviceCredit.classList.add("active");
-  if (serviceDelivery.classList.contains("active")) {
-    serviceDelivery.classList.remove("active");
-  } else if (serviceWarranty.classList.contains("active")) {
-    serviceWarranty.classList.remove("active");
-  }
-  if (slideDelivery.classList.contains("services-slide-active")) {
-    slideDelivery.classList.remove("services-slide-active");
-  } else if (slideWarranty.classList.contains("services-slide-active")) {
-    slideWarranty.classList.remove("services-slide-active");
-  }
-});
+// var serviceDelivery = document.querySelector(".delivery");
+// var slideDelivery = document.querySelector(".services-slide-1");
+// var serviceWarranty = document.querySelector(".warranty");
+// var slideWarranty = document.querySelector(".services-slide-2");
+// var serviceCredit = document.querySelector(".credit");
+// var slideCredit = document.querySelector(".services-slide-3");
+// serviceWarranty.addEventListener("click", function (evt) {
+//   evt.preventDefault();
+//   slideWarranty.classList.add("services-slide-active");
+//   serviceWarranty.classList.add("active");
+//   if (serviceDelivery.classList.contains("active")) {
+//     serviceDelivery.classList.remove("active");
+//   } else if (serviceCredit.classList.contains("active")) {
+//     serviceCredit.classList.remove("active");
+//   }
+//   if (slideDelivery.classList.contains("services-slide-active")) {
+//     slideDelivery.classList.remove("services-slide-active");
+//   } else if (slideCredit.classList.contains("services-slide-active")) {
+//     slideCredit.classList.remove("services-slide-active");
+//   }
+// });
+// serviceDelivery.addEventListener("click", function (evt) {
+//   evt.preventDefault();
+//   slideDelivery.classList.add("services-slide-active");
+//   serviceDelivery.classList.add("active");
+//   if (serviceWarranty.classList.contains("active")) {
+//     serviceWarranty.classList.remove("active");
+//   } else if (serviceCredit.classList.contains("active")) {
+//     serviceCredit.classList.remove("active");
+//   }
+//   if (slideWarranty.classList.contains("services-slide-active")) {
+//     slideWarranty.classList.remove("services-slide-active");
+//   } else if (slideCredit.classList.contains("services-slide-active")) {
+//     slideCredit.classList.remove("services-slide-active");
+//   }
+// });
+// serviceCredit.addEventListener("click", function (evt) {
+//   evt.preventDefault();
+//   slideCredit.classList.add("services-slide-active");
+//   serviceCredit.classList.add("active");
+//   if (serviceDelivery.classList.contains("active")) {
+//     serviceDelivery.classList.remove("active");
+//   } else if (serviceWarranty.classList.contains("active")) {
+//     serviceWarranty.classList.remove("active");
+//   }
+//   if (slideDelivery.classList.contains("services-slide-active")) {
+//     slideDelivery.classList.remove("services-slide-active");
+//   } else if (slideWarranty.classList.contains("services-slide-active")) {
+//     slideWarranty.classList.remove("services-slide-active");
+//   }
+// });
