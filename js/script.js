@@ -119,63 +119,18 @@ var servicesItems = document.querySelectorAll(".services-item");
 var servicesSlides = document.querySelectorAll(".services-slide");
 var slidesSwitcher = function (item, slide) {
   item.addEventListener("click", function (evt) {
+    servicesItems.forEach(function (el) {
+      el.classList.remove("active")
+    });
+    servicesSlides.forEach(function (el) {
+      el.classList.remove("services-slide-active")
+    });
     evt.preventDefault();
+
     slide.classList.add("services-slide-active");
     item.classList.add("active");
   });
 };
-for(var i = 0; i <servicesItems.length; i++) {
-slidesSwitcher(servicesItems[i], servicesSlides[i]);
+for (var i = 0; i < servicesItems.length; i++) {
+  slidesSwitcher(servicesItems[i], servicesSlides[i]);
 };
-
-// var serviceDelivery = document.querySelector(".delivery");
-// var slideDelivery = document.querySelector(".services-slide-1");
-// var serviceWarranty = document.querySelector(".warranty");
-// var slideWarranty = document.querySelector(".services-slide-2");
-// var serviceCredit = document.querySelector(".credit");
-// var slideCredit = document.querySelector(".services-slide-3");
-// serviceWarranty.addEventListener("click", function (evt) {
-//   evt.preventDefault();
-//   slideWarranty.classList.add("services-slide-active");
-//   serviceWarranty.classList.add("active");
-//   if (serviceDelivery.classList.contains("active")) {
-//     serviceDelivery.classList.remove("active");
-//   } else if (serviceCredit.classList.contains("active")) {
-//     serviceCredit.classList.remove("active");
-//   }
-//   if (slideDelivery.classList.contains("services-slide-active")) {
-//     slideDelivery.classList.remove("services-slide-active");
-//   } else if (slideCredit.classList.contains("services-slide-active")) {
-//     slideCredit.classList.remove("services-slide-active");
-//   }
-// });
-// serviceDelivery.addEventListener("click", function (evt) {
-//   evt.preventDefault();
-//   slideDelivery.classList.add("services-slide-active");
-//   serviceDelivery.classList.add("active");
-//   if (serviceWarranty.classList.contains("active")) {
-//     serviceWarranty.classList.remove("active");
-//   } else if (serviceCredit.classList.contains("active")) {
-//     serviceCredit.classList.remove("active");
-//   }
-//   if (slideWarranty.classList.contains("services-slide-active")) {
-//     slideWarranty.classList.remove("services-slide-active");
-//   } else if (slideCredit.classList.contains("services-slide-active")) {
-//     slideCredit.classList.remove("services-slide-active");
-//   }
-// });
-// serviceCredit.addEventListener("click", function (evt) {
-//   evt.preventDefault();
-//   slideCredit.classList.add("services-slide-active");
-//   serviceCredit.classList.add("active");
-//   if (serviceDelivery.classList.contains("active")) {
-//     serviceDelivery.classList.remove("active");
-//   } else if (serviceWarranty.classList.contains("active")) {
-//     serviceWarranty.classList.remove("active");
-//   }
-//   if (slideDelivery.classList.contains("services-slide-active")) {
-//     slideDelivery.classList.remove("services-slide-active");
-//   } else if (slideWarranty.classList.contains("services-slide-active")) {
-//     slideWarranty.classList.remove("services-slide-active");
-//   }
-// });
