@@ -13,19 +13,18 @@
 <body>
   <header class="main-header">
     <div class="header-top">
-      <div class="header-top-wrapper">
+      <div class="header-top-wrapper container">
         <a class="header-logo">
-          <img src="img/logo-technomart.svg" width="110" height="20" alt="Логотип «Техномарт»">
+          <img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип «Техномарт»">
         </a>
         <form class="main-search" method="get" action="https://echo.htmlacademy.ru">
-          <!-- <label for="main-search" class="visually-hidden">Поиск</label> -->
           <input type="search" id="main-search" class="main-search-input" aria-label="Поиск" placeholder="Поиск:">
           <button type="submit" class="main-search-button" aria-label="Найти">Найти</button>
         </form>
         <div class="session-menu">
-          <div class="bookmarks"><a href="#">Закладки: <span>0</span></a></div>
-          <div class="shopping-bag"><a href="#">Корзина: <span>0</span></a></div>
-          <div class="order"><a href="#">Оформить заказ</a></div>
+          <a class="bookmarks" href="#">Закладки: <span>0</span></a>
+          <a class="shopping-bag" href="#">Корзина: <span>0</span></a>
+          <a class="order" href="#">Оформить заказ</a>
         </div>
       </div>
     </div>
@@ -48,9 +47,7 @@
           <li class="registration-link"><a href="#">Регистрация</a></li>
         </ul>
       </div>
-    </div>
-    <div class="header-bottom container">
-      <nav class="main-navigation">
+      <nav class="main-navigation container">
         <ul class="site-navigation">
           <li class="current-page">Главная</li>
           <li><a href="#">Компания</a></li>
@@ -62,6 +59,9 @@
         </ul>
       </nav>
     </div>
+
+
+
   </header>
   <main>
     <div class="promo container">
@@ -96,19 +96,19 @@
 
         </div>
         <div class="control-dots">
-          <div class="dot dot-left"></div>
-          <div class="dot dot-right dot-active"></div>
+          <button class="dot dot-left" type="button"></button>
+          <button class="dot dot-right dot-active" type="button"></button>
         </div>
         <div class="slider-promo-buttons">
-          <a class="arrow-right" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="40"
+          <button class="arrow-right" href="#" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="40"
               viewBox="0 0 22 40">
               <path fill="#FFF" d="M2.098-.035L.009 2.064l17.789 17.883L-.048 37.886l2.089 2.099 19.935-20.038z" />
             </svg>
-          </a>
-          <a class="arrow-left" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="40"
+          </button>
+          <button class="arrow-left" href="#" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="40"
               viewBox="0 0 22 40">
               <path fill="#FFF" d="M19.83-.035l2.089 2.099L4.13 19.947l17.847 17.939-2.09 2.099L-.048 19.947z" /></svg>
-          </a>
+          </button>
 
         </div>
         <a class="button button-slider" href="catalog.html">Открыть каталог</a>
@@ -218,7 +218,7 @@
       </div>
     </section>
     <section class="services">
-      <div class="sevices-wrapper">
+      <div class="services-wrapper">
         <h2>Сервисы</h2>
         <p class="services-brief">Хороший интернет-магазин отличается от плохого не только ценами!
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
