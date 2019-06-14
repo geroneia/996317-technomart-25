@@ -103,7 +103,6 @@ img {
   background-color: #ca2c37;
 }
 
-
 .main-search {
   position: relative;
   -ms-flex-item-align: center;
@@ -765,7 +764,7 @@ img {
   line-height: 36px;
   text-transform: uppercase;
   padding: 0;
-  margin-right:0;
+  margin-right: 0;
   margin-top: 23px;
   margin-left: 24px;
   margin-bottom: 2px;
@@ -833,6 +832,13 @@ img {
   height: 10px;
   background-color: #ffffff;
   border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.dot:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 4px 0 #4D90FE;
+  box-shadow: 0 0 4px 0 #4D90FE;
   border-radius: 50%;
 }
 
@@ -1060,7 +1066,7 @@ img {
   padding-left: 0;
   padding-top: 65px;
   padding-bottom: 25px;
-  padding-right:0;
+  padding-right: 0;
   margin: 0;
   text-transform: uppercase;
 }
@@ -1488,10 +1494,9 @@ img {
 }
 
 .filter fieldset:nth-child(2) {
-  padding-bottom:0;
+  padding-bottom: 0;
   margin-bottom: 20px;
 }
-
 
 .filter legend {
   margin: 0;
@@ -2129,7 +2134,7 @@ img {
 }
 
 .inner-page .main-footer {
-  margin-top:0;
+  margin-top: 0;
 }
 
 .footer-top,
