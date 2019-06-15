@@ -68,6 +68,7 @@ if (toCart) {
     toCart[i].addEventListener("click", function (evt) {
       evt.preventDefault();
       popupCart.classList.add("modal-cart-show");
+      closeCart.focus();
     })
   }
 }

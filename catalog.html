@@ -14,17 +14,17 @@
   <header class="main-header">
     <div class="header-top">
       <div class="header-top-wrapper container">
-        <a class="header-logo" href="index.html">
+        <a class="header-logo accessible" href="index.html">
           <img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип «Техномарт»">
         </a>
         <form class="main-search" method="get" action="https://echo.htmlacademy.ru">
           <input type="search" id="main-search" class="main-search-input" aria-label="Поиск" placeholder="Поиск:">
-          <button type="submit" class="main-search-button accessible" aria-label="Найти">Найти</button>
+          <button type="submit" class="main-search-button accessible" aria-label="Найти"><span class="visually-hidden">Найти</span></button>
         </form>
         <div class="session-menu">
-          <a class="bookmarks" href="#">Закладки: <span>0</span></a>
-          <a class="shopping-bag item-added" href="#">Корзина: <span>10</span></a>
-          <a class="order" href="#">Оформить заказ</a>
+          <a class="bookmarks accessible" href="#">Закладки: <span>0</span></a>
+          <a class="shopping-bag item-added accessible" href="#">Корзина: <span>10</span></a>
+          <a class="order accessible" href="#">Оформить заказ</a>
         </div>
       </div>
     </div>
@@ -34,19 +34,19 @@
           строительных материалов и&nbsp;инструментов для ремонта </h1>
         <section class="header-contacts">
           <h2 class="visually-hidden">Контакты</h2>
-          <a class="contacts-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <a class="contacts-phone accessible" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <p class="contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </section>
         <div class="user-navigation-wrapper">
           <ul class="user-navigation">
-            <li class="user-profile"><a class="icon-user-profile" href="#">
+            <li class="user-profile"><a class="icon-user-profile accessible" href="#">
                 <svg class="icon-user" xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18">
                   <path fill="#c5c5c5"
                     d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z" />
                 </svg>
                 Равшан Джамшутович</a>
             </li>
-            <li class="logout-link"><a class="logout-link-icon" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+            <li class="logout-link"><a class="logout-link-icon accessible" href="#"><svg xmlns="http://www.w3.org/2000/svg"
                   width="21" height="17" viewBox="0 0 21 17">
                   <g fill="#c5c5c5">
                     <path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z" />
@@ -59,8 +59,8 @@
 
           </ul>
           <ul class="user-options">
-            <li class="user-orders-link"><a href="#">Мои заказы</a></li>
-            <li class="user-account-link"><a href="#">Личный кабинет</a></li>
+            <li class="user-orders-link"><a class="accessible" href="#">Мои заказы</a></li>
+            <li class="user-account-link"><a class="accessible" href="#">Личный кабинет</a></li>
           </ul>
         </div>
       </div>
@@ -157,15 +157,15 @@
           <div class="sorting">
             <h3>Сортировка:</h3>
             <ul class="sorting-list">
-              <li class="sorting-item sorting-item-active"><a href="#">По цене</a></li>
-              <li class="sorting-item"><a href="#">По типу</a></li>
-              <li class="sorting-item"><a href="#">По функционалу</a></li>
-              <li class="sorting-item sorting-item-active"><a class="sorting-item-up" href="#"><span
+              <li class="sorting-item sorting-item-active"><a class="accessible" href="#">По цене</a></li>
+              <li class="sorting-item"><a class="accessible" href="#">По типу</a></li>
+              <li class="sorting-item"><a class="accessible" href="#">По функционалу</a></li>
+              <li class="sorting-item sorting-item-active"><a class="sorting-item-up accessible" href="#"><span
                     class="visually-hidden">По
                     возрастанию</span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10"
                     viewBox="0 0 11 10">
                     <path fill="#231F20" d="M5.5 0L0 10h11z" /></svg></a></li>
-              <li class="sorting-item"><a class="sorting-item-down" href="#"><span class="visually-hidden">По
+              <li class="sorting-item"><a class="sorting-item-down accessible" href="#"><span class="visually-hidden">По
                     убыванию</span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                     <path fill="#231F20" d="M5.5 10L0 0h11" /></svg></a></li>
             </ul>
@@ -264,10 +264,10 @@
 
           </ul>
           <ul class="pagination">
-            <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
-            <li class="pagination-item"><a href="#">2</a></li>
-            <li class="pagination-item"><a href="#">3</a></li>
-            <li class="pagination-item pagination-item-next"><a href="#">Следующая</a></li>
+            <li class="pagination-item pagination-item-current"><a class="accessible" href="#">1</a></li>
+            <li class="pagination-item"><a class="accessible" href="#">2</a></li>
+            <li class="pagination-item"><a class="accessible" href="#">3</a></li>
+            <li class="pagination-item pagination-item-next"><a class="accessible" href="#">Следующая</a></li>
           </ul>
         </div>
       </div>
@@ -288,15 +288,15 @@
   <footer class="main-footer">
     <div class="container">
       <div class="footer-top">
-        <a class="footer-logo" href="index.html">
+        <a class="footer-logo accessible" href="index.html">
           <img src="img/logo-technomart.svg" width="137" height="22" alt="Логотип «Техномарт»">
         </a>
         <ul class="footer-navigation-list">
-          <li><a href="#">Компания</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li><a class="accessible" href="#">Компания</a></li>
+          <li><a class="accessible" href="#">Новости</a></li>
+          <li><a class="accessible" href="catalog.html">Каталог</a></li>
+          <li><a class="accessible" href="#">Доставка</a></li>
+          <li><a class="accessible" href="#">Контакты</a></li>
         </ul>
       </div>
       <div class="footer-middle">
@@ -335,10 +335,10 @@
         </ul>
         <p class="footer-feedback">
           Обратная связь:
-          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <a class="accessible" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </p>
         <p class="studio">Разработано —
-          <a href="https://htmlacademy.ru/intensive/htmlcss"><span>htmlacademy.ru</span></a>
+          <a class="accessible" href="https://htmlacademy.ru/intensive/htmlcss"><span>htmlacademy.ru</span></a>
         </p>
       </div>
     </div>
@@ -352,7 +352,7 @@
       <button class="button button-checkout accessible" type="button">Оформить заказ</button>
       <button class="button button-modal-close accessible">Продолжить покупки</button>
     </div>
-    <button class="modal-cart-close accessible" aria-label="Закрыть окно сообщения">Закрыть</button>
+    <button class="modal-cart-close accessible" aria-label="Закрыть окно сообщения"><span class="visually-hidden">Закрыть</span></button>
   </div>
   <script src="./js/script.js"></script>
 </body>
