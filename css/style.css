@@ -313,7 +313,7 @@ img {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 39px;
+  margin-bottom: 38px;
 }
 
 .main-headline {
@@ -778,7 +778,7 @@ img {
   text-transform: uppercase;
   padding: 0;
   margin-right: 0;
-  margin-top: 23px;
+  margin-top: 24px;
   margin-left: 24px;
   margin-bottom: 2px;
 }
@@ -915,6 +915,8 @@ img {
 .popular-products,
 .popular-manufacturers {
   position: relative;
+  margin-bottom: 2px;
+
 }
 
 .popular-products-header,
@@ -928,9 +930,9 @@ img {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 19px;
+  margin-bottom: 21px;
   padding-top: 5px;
-  padding-right: 24px;
+  padding-right: 23px;
   padding-bottom: 4px;
   padding-left: 28px;
   background-color: #f9f5f0;
@@ -947,11 +949,11 @@ img {
 
 .popular-products-button,
 .popular-manufacturers-button {
-  width: 253px;
-  padding-top: 11px;
+  width: 254px;
+  padding-top: 12px;
   padding-bottom: 9px;
   border-radius: 3px;
-  margin-top: -1px;
+  margin-top: 0px;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -1124,7 +1126,7 @@ img {
   color: #ffffff;
   background-color: #32425c;
   padding-left: 22px;
-  padding-top: 14px;
+  padding-top: 15px;
   padding-bottom: 18px;
   border: none;
   font-family: "Cuprum", Arial, sans-serif;
@@ -1297,14 +1299,14 @@ img {
 
 .contacts p {
   width: 185px;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .delivery-companies {
   padding: 0;
   padding-left: 36px;
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 38px;
   list-style: none;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
@@ -1337,7 +1339,7 @@ img {
   border-radius: 3px;
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: 400;
-  font-size: 14;
+  font-size: 14px;
   line-height: 18px;
 }
 
@@ -1896,7 +1898,7 @@ img {
           flex-direction: column;
   width: 218px;
   margin-right: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   padding-top: 2px;
   line-height: 20px;
   font-family: "PT Sans", Arial, sans-serif;
@@ -2026,7 +2028,7 @@ img {
 .catalog-item-title {
   min-height: 40px;
   padding: 0 25px;
-  margin-top: 11px;
+  margin-top: 10px;
   margin-bottom: 11px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
@@ -2052,9 +2054,9 @@ img {
   width: 80px;
   margin-top: auto;
   margin-right: 39px;
-  margin-bottom: 18px;
-  margin-left: 42px;
-  padding-top: 11px;
+  margin-bottom: 19px;
+  margin-left: 43px;
+  padding-top: 10px;
   padding-right: 33px;
   padding-left: 28px;
   padding-bottom: 12px;
