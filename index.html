@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
-  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans&display=swap&subset=cyrillic"
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&display=swap&subset=cyrillic"
     rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
@@ -60,7 +60,7 @@
       </nav>
     </div>
   </header>
-  <main>
+  <main class="main-content">
     <div class="promo container">
       <ul class="products-promo">
         <li class="products-promo-item">
@@ -123,8 +123,10 @@
       </ul>
     </div>
     <section class="popular-products container">
-      <h2>Популярные товары:</h2>
-      <a class="button popular-products-button accessible" href="#">Все популярные товары</a>
+      <header class="popular-products-header">
+        <h2>Популярные товары:</h2>
+        <a class="button popular-products-button accessible" href="#">Все популярные товары</a>
+      </header>
       <ul class="catalog-list">
         <li class="catalog-item">
           <div class="item-adding">
@@ -170,8 +172,10 @@
       </ul>
     </section>
     <section class="popular-manufacturers container">
-      <h2>Популярные производители</h2>
-      <a class="button popular-manufacturers-button accessible" href="#">Все производители</a>
+      <header class="popular-manufacturers-header">
+        <h2>Популярные производители:</h2>
+        <a class="button popular-manufacturers-button accessible" href="#">Все производители</a>
+      </header>
       <div class="popular-manufacturers-wrapper">
         <a class="popular-manufacturers-item accessible" href="#">
           <img class="manufacturer-1" src="./img/bosh-logo.png" width="126" height="37" alt="Логотип Bosch"></a>
@@ -248,7 +252,7 @@
       <section class="contacts">
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-        <a class="accessible" href="map.html" class="map-link">
+        <a class="map-link accessible" href="map.html">
           <img src="img/map.png" width="300" height="158"
             alt="Офис компании по адресу ул. Большая Конюшенная, 19/8, Санкт-Петербург">
         </a>
@@ -347,7 +351,8 @@
     <img src="img/map-popup.png" width="940" height="446"
       alt="Офис компании по адресу ул. Большая Конюшенная, 19/8, Санкт-Петербург">
 
-    <button class="button modal-map-button accessible" type="button" aria-label="Закрыть карту"><span class="visually-hidden"></span>Закрыть</span></button>
+    <button aria-label="Закрыть карту" class="button modal-map-button accessible" type="button"><span
+      class="visually-hidden">Закрыть</span></button>
 
   </section>
   <div class="modal modal-cart">
@@ -361,7 +366,7 @@
     </div>
     <button class="modal-cart-close accessible" aria-label="Закрыть окно сообщения"><span class="visually-hidden">Закрыть</span></button>
   </div>
-  <script src="./js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

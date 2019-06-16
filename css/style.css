@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Cuprum", Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -69,6 +70,7 @@ img {
 .main-header {
   width: 100%;
   margin-bottom: 59px;
+  font-family: "Cuprum", Arial, sans-serif;
 }
 
 .inner-page .main-header {
@@ -127,7 +129,6 @@ img {
   height: 17px;
   border: none;
   outline: none;
-  color: transparent;
   background-image: url("../img/icon-search.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -144,6 +145,7 @@ img {
   padding-left: 48px;
   padding-top: 12px;
   padding-bottom: 12px;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
   background-color: transparent;
@@ -208,6 +210,7 @@ img {
   padding-left: 21px;
   padding-top: 12px;
   padding-bottom: 12px;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
@@ -229,6 +232,7 @@ img {
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 44px;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
@@ -255,6 +259,7 @@ img {
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 50px;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
@@ -314,10 +319,9 @@ img {
 .main-headline {
   display: block;
   width: 200px;
-  margin: 0;
   margin-top: 49px;
-  margin-right: 68px;
-  margin-left: 53px;
+  margin-right: 52px;
+  margin-left: 52px;
   margin-bottom: 0;
   padding: 0;
   font-size: 16px;
@@ -332,9 +336,9 @@ img {
   width: 300px;
   padding: 0;
   margin-top: 46px;
-  margin-right: 19px;
+  margin-right: 16px;
   margin-bottom: 0;
-  margin-left: 0;
+  margin-left: 16px;
 }
 
 .contacts-phone,
@@ -344,7 +348,7 @@ img {
   display: inline-block;
   vertical-align: middle;
   margin: 0;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
   padding-top: 10px;
   padding-bottom: 9px;
   padding-left: 71px;
@@ -371,7 +375,7 @@ img {
 .contacts-address {
   display: block;
   padding: 0;
-  padding-left: 10px;
+  padding-left: 9px;
   margin: 0;
   font-size: 14px;
   line-height: 24px;
@@ -389,6 +393,7 @@ img {
   padding: 0;
   padding-top: 45px;
   margin: 0;
+  margin-left: 4px;
   list-style: none;
 }
 
@@ -420,7 +425,7 @@ img {
   position: absolute;
   width: 20px;
   height: 17px;
-  top: 14px;
+  top: 15px;
   left: 14px;
 }
 
@@ -452,6 +457,7 @@ img {
   padding-left: 46px;
   padding-right: 5px;
   margin: 0;
+  margin-bottom: 4px;
   font-size: 21px;
   line-height: 21px;
   color: #000000;
@@ -503,7 +509,7 @@ img {
 .user-options {
   display: block;
   margin: 0;
-  margin-left: 20px;
+  margin-left: 22px;
   padding: 0;
 }
 
@@ -625,6 +631,10 @@ img {
   background-color: #1d2739;
 }
 
+.main-content {
+  margin-bottom: 86px;
+}
+
 .promo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -634,6 +644,8 @@ img {
   justify-content: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  margin-bottom: 53px;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
@@ -658,16 +670,16 @@ img {
   padding-left: 22px;
   padding-top: 21px;
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
   font-size: 24px;
   line-height: 30px;
 }
 
 .promo-button {
   width: 135px;
-  padding-top: 10px;
+  padding-top: 11px;
   padding-bottom: 10px;
-  margin-left: 23px;
+  margin-left: 24px;
   border-radius: 2px;
   background-color: rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -717,7 +729,7 @@ img {
   background-color: #ffbf47;
   background-image: url("../img/icon-1.svg");
   background-repeat: no-repeat;
-  background-position: 213px 32px;
+  background-position: 213px 31px;
   background-size: 44px 65px;
 }
 
@@ -742,7 +754,6 @@ img {
   width: 620px;
   height: 266px;
   margin-right: 20px;
-  margin-bottom: 53px;
   position: relative;
 }
 
@@ -761,12 +772,13 @@ img {
 
 .slides h3 {
   display: inline-block;
+  vertical-align: top;
   font-size: 36px;
   line-height: 36px;
   text-transform: uppercase;
   padding: 0;
   margin-right: 0;
-  margin-top: 24px;
+  margin-top: 23px;
   margin-left: 24px;
   margin-bottom: 2px;
 }
@@ -774,7 +786,7 @@ img {
 .slides p {
   padding: 0;
   margin: 0;
-  margin-left: 24px;
+  margin-left: 25px;
 }
 
 .slider-promo .button-slider {
@@ -785,7 +797,7 @@ img {
   padding-top: 11px;
   padding-bottom: 9px;
   padding-left: 49px;
-  padding-right: 46px;
+  padding-right: 47px;
   border-radius: 2px;
 }
 
@@ -850,7 +862,7 @@ img {
 }
 
 .dot-right {
-  margin-left: 6px;
+  margin-left: 5px;
 }
 
 .slider-promo-buttons .arrow-right,
@@ -896,7 +908,7 @@ img {
   margin-bottom: 0;
   background-image: url("../img/icon-5.svg");
   background-repeat: no-repeat;
-  background-position: 191px 31px;
+  background-position: 191px 32px;
   background-size: 78px 63px;
 }
 
@@ -905,30 +917,44 @@ img {
   position: relative;
 }
 
+.popular-products-header,
+.popular-manufacturers-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 19px;
+  padding-top: 5px;
+  padding-right: 24px;
+  padding-bottom: 4px;
+  padding-left: 28px;
+  background-color: #f9f5f0;
+}
+
 .popular-products h2,
 .popular-manufacturers h2 {
-  display: block;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 28px;
-  margin: 0;
-  margin-bottom: 20px;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   font-weight: 400;
   line-height: 30px;
   text-transform: uppercase;
-  background-color: #f9f5f0;
 }
 
 .popular-products-button,
 .popular-manufacturers-button {
-  position: absolute;
-  top: 25px;
-  right: 34px;
   width: 253px;
   padding-top: 11px;
-  padding-bottom: 10px;
-  border-radius: 2px;
+  padding-bottom: 9px;
+  border-radius: 3px;
+  margin-top: -1px;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .popular-products-button:hover,
@@ -942,7 +968,7 @@ img {
 }
 
 .popular-manufacturers {
-  margin-bottom: 65px;
+  margin-bottom: 66px;
 }
 
 .popular-manufacturers-wrapper {
@@ -986,44 +1012,45 @@ img {
 }
 
 .manufacturer-1 {
-  margin-top: -6px;
+  margin-top: 0px;
 }
 
 .manufacturer-2 {
-  margin-top: -9px;
+  margin-top: -3px;
   margin-left: -1px;
 }
 
 .manufacturer-3 {
-  margin-top: -10px;
+  margin-top: -3px;
 }
 
 .manufacturer-4 {
-  margin-top: -20px;
+  margin-top: -13px;
   margin-left: -2px;
 }
 
 .manufacturer-5 {
-  margin-top: -2px;
+  margin-top: 4px;
   margin-left: 4px;
 }
 
 .manufacturer-6 {
-  margin-top: -6px;
+  margin-top: 0px;
   margin-left: -4px;
 }
 
 .manufacturer-7 {
-  margin-top: -8px;
+  margin-top: 0px;
 }
 
 .manufacturer-8 {
-  margin-top: -12px;
+  margin-top: -6px;
   margin-left: 4px;
 }
 
 .services {
   background-color: #f4f7f9;
+  margin-bottom: 80px;
 }
 
 .services-wrapper {
@@ -1033,6 +1060,7 @@ img {
 }
 
 .services h2 {
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
@@ -1095,10 +1123,11 @@ img {
     inset 0 -2px #293449;
   color: #ffffff;
   background-color: #32425c;
-  padding-left: 21px;
-  padding-top: 15px;
+  padding-left: 22px;
+  padding-top: 14px;
   padding-bottom: 18px;
   border: none;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
@@ -1138,12 +1167,13 @@ img {
 }
 
 .services-slide h3 {
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 36px;
   line-height: 36px;
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
   padding: 0;
-  padding-top: 32px;
+  padding-top: 31px;
   font-weight: 400;
   color: #32425c;
   text-transform: uppercase;
@@ -1167,7 +1197,7 @@ img {
 .services-slide-1 {
   background-image: url("../img/bg-services-slider-1.png");
   background-repeat: no-repeat;
-  background-position: 150px 57px;
+  background-position: 151px 55px;
 }
 
 .services-slide-2 .services-description {
@@ -1221,7 +1251,6 @@ img {
   -ms-flex-pack: justify;
   justify-content: space-between;
   color: #000000;
-  padding-top: 80px;
   background-color: #ffffff;
 }
 
@@ -1243,6 +1272,7 @@ img {
   padding: 0;
   margin: 0;
   margin-bottom: 26px;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   font-weight: 400;
   line-height: 30px;
@@ -1262,7 +1292,7 @@ img {
 
 .about-us p:last-of-type {
   width: 390px;
-  margin-bottom: 22px;
+  margin-bottom: 21px;
 }
 
 .contacts p {
@@ -1274,7 +1304,9 @@ img {
   padding: 0;
   padding-left: 36px;
   margin: 0;
+  margin-bottom: 36px;
   list-style: none;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
 }
@@ -1287,7 +1319,7 @@ img {
 .delivery-companies li::before {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 9px;
   left: -36px;
   width: 25px;
   height: 2px;
@@ -1300,10 +1332,13 @@ img {
 
 .button-about-us,
 .button-feedback {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 37px;
+  padding-top: 11px;
+  padding-bottom: 9px;
   border-radius: 3px;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14;
+  line-height: 18px;
 }
 
 .button-about-us:hover,
@@ -1322,8 +1357,13 @@ img {
 }
 
 .button-feedback {
-  width: 100%;
-  text-align: center;
+  width: 295px;
+  padding-left: 5px;
+}
+
+.map-link {
+  display: block;
+  margin-bottom: 36px;
 }
 
 .contacts .map {
@@ -1343,7 +1383,7 @@ img {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 0;
-  margin-top: 21px;
+  margin-top: 20px;
   margin-bottom: 21px;
   list-style: none;
 }
@@ -1720,7 +1760,7 @@ img {
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 700px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   background-color: #f7f3ec;
 }
 
@@ -1749,7 +1789,7 @@ img {
   margin: 0;
   padding: 0;
   padding-top: 9px;
-  padding-bottom: 10px;
+  padding-bottom: 9px;
 }
 
 .sorting-list a {
@@ -1857,12 +1897,13 @@ img {
   width: 218px;
   margin-right: 20px;
   margin-bottom: 20px;
+  padding-top: 2px;
   line-height: 20px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   font-weight: 700;
   text-align: center;
-  border: 1px solid #cccccc;
+  border: 1px solid #eaeaea;
 }
 
 .catalog-item:nth-child(3n) {
@@ -1985,15 +2026,19 @@ img {
 .catalog-item-title {
   min-height: 40px;
   padding: 0 25px;
-  margin-top: 10px;
-  margin-bottom: 12px;
+  margin-top: 11px;
+  margin-bottom: 11px;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
   color: #000000;
 }
 
 .old-price {
   min-height: 20px;
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 7px;
   color: #999999;
   text-decoration: line-through;
   text-transform: uppercase;
@@ -2008,11 +2053,11 @@ img {
   margin-top: auto;
   margin-right: 39px;
   margin-bottom: 18px;
-  margin-left: 43px;
-  padding-top: 10px;
+  margin-left: 42px;
+  padding-top: 11px;
   padding-right: 33px;
   padding-left: 28px;
-  padding-bottom: 13px;
+  padding-bottom: 12px;
   color: #ffffff;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='141' height='38' viewBox='0 0 141 38'%3E%3Cpath fill='%23EE3643' d='M121.632 0H3C1.35 0 0 1.35 0 3v32c0 1.65 1.35 3 3 3h118.632L141 19 121.632 0z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -2105,10 +2150,10 @@ img {
   -ms-flex-direction: column;
   flex-direction: column;
   margin: 0;
-  margin-top: 85px;
   padding: 0;
   color: #ffffff;
   background-color: #32425c;
+  font-family: "Cuprum", Arial, sans-serif;
 }
 
 .inner-page .main-footer {
@@ -2144,8 +2189,8 @@ img {
 
 .footer-logo img {
   width: 137px;
-  height: 22px;
-  margin-top: 22px;
+  height: 23px;
+  margin-top: 20px;
   margin-bottom: 19px;
   margin-left: auto;
   margin-right: auto;
@@ -2182,7 +2227,7 @@ img {
   display: block;
   margin: 0;
   padding: 0;
-  padding-top: 39px;
+  padding-top: 38px;
   padding-left: 59px;
   color: #f1f5f7;
 }
@@ -2200,9 +2245,8 @@ img {
 .footer-contacts {
   margin: 0;
   padding: 0;
-  padding-top: 34px;
-  padding-left: 4px;
-  padding-right: 55px;
+  padding-top: 33px;
+  padding-left: 3px;
   width: 325px;
   font-size: 18px;
   line-height: 24px;
@@ -2217,7 +2261,7 @@ img {
   -ms-flex-pack: end;
   justify-content: flex-end;
   width: 550px;
-  padding-top: 34px;
+  margin-top: 33px;
 }
 
 .catalog-menu a {
@@ -2258,7 +2302,10 @@ img {
   width: 240px;
   margin: 0;
   margin-right: 150px;
-  padding: 37px 0;
+  padding-top: 36px;
+  padding-right: 1px;
+  padding-bottom: 0;
+  padding-left: 1px;
 }
 
 .footer-social {
@@ -2308,14 +2355,14 @@ img {
 .footer-feedback {
   width: 140px;
   margin: 0;
-  padding: 37px 0;
+  padding-top: 36px;
 }
 
 .studio {
   width: 112px;
   margin: 0;
   margin-left: 20px;
-  padding: 37px 0;
+  padding-top: 36px;
   padding-left: 28px;
 }
 
@@ -2380,7 +2427,6 @@ img {
   left: 910px;
   border: none;
   outline: none;
-  color: transparent;
   background-image: url("../img/icon-close.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -2609,7 +2655,6 @@ img {
   -ms-flex-direction: column;
   flex-direction: column;
   z-index: 2;
-  /* top: 405px; */
   width: 620px;
   padding: 0;
   margin: 0;
