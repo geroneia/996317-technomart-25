@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans&display=swap&subset=cyrillic"
     rel="stylesheet">
   <link href="./css/normalize.css" rel="stylesheet">
-  <link href="./css/style.min.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
 </head>
 
 <body class="inner-page">
@@ -18,7 +18,8 @@
           <img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип «Техномарт»">
         </a>
         <form class="main-search" method="get" action="https://echo.htmlacademy.ru">
-          <input type="search" id="main-search" class="main-search-input" aria-label="Поиск" placeholder="Поиск:">
+          <label for="main-search"><span class="visually-hidden">Поиск</span></label>
+          <input type="search" id="main-search" class="main-search-input" placeholder="Поиск:">
           <button type="submit" class="main-search-button accessible" aria-label="Найти"><span class="visually-hidden">Найти</span></button>
         </form>
         <div class="session-menu">
@@ -264,7 +265,7 @@
 
           </ul>
           <ul class="pagination">
-            <li class="pagination-item pagination-item-current"><a class="accessible" href="#">1</a></li>
+            <li class="pagination-item pagination-item-current"><a class="accessible">1</a></li>
             <li class="pagination-item"><a class="accessible" href="#">2</a></li>
             <li class="pagination-item"><a class="accessible" href="#">3</a></li>
             <li class="pagination-item pagination-item-next"><a class="accessible" href="#">Следующая</a></li>
