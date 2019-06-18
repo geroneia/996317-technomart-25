@@ -676,9 +676,7 @@ img {
   content: '';
 
   -webkit-border-radius: 50%;
-
      -moz-border-radius: 50%;
-
           border-radius: 50%;
   background-color: #32425c;
 }
@@ -862,9 +860,7 @@ img {
   cursor: pointer;
 
   -webkit-border-radius: 2px;
-
      -moz-border-radius: 2px;
-
           border-radius: 2px;
   background-color: rgba(0, 0, 0, .1);
 }
@@ -1006,9 +1002,7 @@ img {
   padding-left: 49px;
 
   -webkit-border-radius: 2px;
-
      -moz-border-radius: 2px;
-
           border-radius: 2px;
 }
 
@@ -1204,9 +1198,7 @@ img {
   font-weight: 400;
 
   -webkit-border-radius: 3px;
-
      -moz-border-radius: 3px;
-
           border-radius: 3px;
 }
 
@@ -1534,9 +1526,7 @@ img {
   font-family: 'Cuprum', Arial, sans-serif;
 
   -webkit-border-radius: 2px;
-
      -moz-border-radius: 2px;
-
           border-radius: 2px;
 }
 
@@ -1667,9 +1657,7 @@ img {
   line-height: 18px;
 
   -webkit-border-radius: 3px;
-
      -moz-border-radius: 3px;
-
           border-radius: 3px;
 }
 
@@ -3451,9 +3439,7 @@ img {
   font-family: 'Cuprum', Arial, sans-serif;
 
   -webkit-border-radius: 3px;
-
      -moz-border-radius: 3px;
-
           border-radius: 3px;
 }
 
@@ -3538,9 +3524,7 @@ img {
   font-family: 'Cuprum', Arial, sans-serif;
 
   -webkit-border-radius: 2px;
-
      -moz-border-radius: 2px;
-
           border-radius: 2px;
 }
 
