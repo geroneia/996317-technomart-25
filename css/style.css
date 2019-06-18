@@ -691,21 +691,22 @@ img {
   font-size: 16px;
   line-height: 18px;
 
-  text-decoration: underline;
-
   color: #32425c;
+  border-bottom: 1px solid #32425c;
   background-color: #f1f5f7;
 }
 
 .user-orders-link a:hover,
 .user-account-link a:hover {
   color: #ee3643;
+  border-bottom: 1px solid #ee3643;
 }
 
 .user-orders-link a:active,
 .user-account-link a:active {
-  opacity: .3;
+  opacity: 0.3;
   color: #32425c;
+  border-bottom: 1px solid #32425c;
 }
 
 .user-navigation a:hover {
@@ -1591,8 +1592,7 @@ img {
   text-transform: uppercase;
 }
 
-.about-us p,
-.contacts p {
+.about-us p {
   margin: 0;
   margin-bottom: 24px;
   padding: 0;
@@ -1610,7 +1610,14 @@ img {
 
 .contacts p {
   width: 185px;
-  margin-bottom: 30px;
+  margin: 0;
+  margin-bottom: 31px;
+  padding: 0;
+
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .delivery-companies {
@@ -1689,7 +1696,7 @@ img {
 .map-link {
   display: block;
 
-  margin-bottom: 37px;
+  margin-bottom: 35px;
 }
 
 .contacts .map {
@@ -1831,7 +1838,7 @@ img {
   padding: 0;
   padding-top: 9px;
   padding-bottom: 11px;
-  padding-left: 18px;
+  padding-left: 19px;
 
   font-size: 13px;
   line-height: 18px;
@@ -1858,7 +1865,7 @@ img {
 }
 
 .filter fieldset:nth-child(2) {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   padding-bottom: 0;
 }
 
@@ -1876,6 +1883,7 @@ img {
 
 .filter-list {
   margin: 0;
+  margin-bottom: 2px;
   padding: 0;
 
   font-size: 15px;
@@ -1903,8 +1911,8 @@ img {
 
 .filter-input-checkbox+label::before {
   position: absolute;
-  top: 0;
-  left: -35px;
+  top: -3px;
+  left: -34px;
 
   width: 19px;
   height: 19px;
@@ -1919,8 +1927,8 @@ img {
 
 .filter-input-checkbox:checked+label::after {
   position: absolute;
-  top: 2px;
-  left: -30px;
+  top: -1px;
+  left: -29px;
 
   width: 17px;
   height: 7px;
@@ -1944,7 +1952,7 @@ img {
 
 .filter-input-radio+label::before {
   position: absolute;
-  top: 0;
+  top: -4px;
   left: -35px;
 
   width: 17px;
@@ -1960,7 +1968,7 @@ img {
 
 .filter-input-radio:checked+label::after {
   position: absolute;
-  top: 4px;
+  top: 0;
   left: -31px;
 
   width: 9px;
@@ -2046,7 +2054,7 @@ img {
 .lever-left,
 .lever-right {
   position: absolute;
-  top: -8px;
+  top: -9px;
   left: 0;
 
   display: block;
@@ -2064,8 +2072,12 @@ img {
           box-shadow: 0 2px 1px #e0ddd8;
 }
 
+.lever-left {
+  left: -1px
+}
+
 .lever-right {
-  left: 140px;
+  left: 139px;
 }
 
 .lever-left:focus,
@@ -2158,7 +2170,6 @@ img {
 .slider-max-value {
   display: inline-block;
 
-  width: 95px;
   height: 18px;
   margin: 0;
   padding: 0;
@@ -2176,14 +2187,20 @@ img {
 }
 
 .slider-min-value {
+  width: 91px;
+
   padding-left: 4px;
 }
 
+.slider-max-value {
+  width: 95px
+}
+
 .filter-button {
-  margin-top: 18px;
-  padding-top: 9px;
-  padding-right: 38px;
-  padding-bottom: 9px;
+  margin-top: 14px;
+  padding-top: 10px;
+  padding-right: 40px;
+  padding-bottom: 8px;
   padding-left: 37px;
 
   font-size: 13px;
@@ -2372,6 +2389,10 @@ img {
 .sorting-item-up:active path,
 .sorting-item-down:active path {
   fill: #ee3643;
+}
+
+.inner-page .catalog-list {
+  margin-bottom: 33px;
 }
 
 .catalog-list {
@@ -2625,9 +2646,11 @@ img {
 }
 
 .pagination {
-  margin-bottom: 70px;
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-bottom: 59px;
   padding: 0;
-  padding-top: 29px;
 
   list-style: none;
 }
@@ -2635,15 +2658,17 @@ img {
 .pagination-item {
   display: inline-block;
 
-  margin-right: 5px;
+  margin-right: 10px;
 
   vertical-align: middle;
 }
 
 .pagination a {
+  display: block;
+
   padding-top: 9px;
-  padding-right: 16px;
-  padding-bottom: 10px;
+  padding-right: 14px;
+  padding-bottom: 9px;
   padding-left: 15px;
 
   font-size: 13px;
@@ -2660,7 +2685,7 @@ img {
 
 .pagination-item-next a {
   padding-right: 30px;
-  padding-left: 30px;
+  padding-left: 31px;
 }
 
 .pagination a:hover {
@@ -2682,7 +2707,7 @@ img {
 }
 
 .catalog-description {
-  padding-bottom: 67px;
+  padding-bottom: 68px;
 
   background-color: #f2f6f8;
 }
@@ -3533,3 +3558,5 @@ img {
           border-radius: 2px;
   background-color: #fff;
 }
+
+
