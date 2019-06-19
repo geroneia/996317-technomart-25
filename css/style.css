@@ -3403,10 +3403,26 @@ img {
   margin: 0;
   padding: 9px 14px;
 
-  border: 1px solid #dee3e4;
-  -webkit-border-radius: 2px;
+  outline: none;
+  border: 2px solid #d7dcde;
+    -webkit-border-radius: 2px;
      -moz-border-radius: 2px;
           border-radius: 2px;
+}
+
+.feedback-form-item input:hover,
+.feedback-form-item textarea:hover {
+  border: 2px solid #b5b5b5;
+}
+
+.feedback-form-item input:active,
+.feedback-form-item textarea:active {
+  border: 2px solid #ee3643;
+}
+
+.feedback-form-item input:focus,
+.feedback-form-item textarea:focus {
+  border: 2px solid #ee3643;
 }
 
 .feedback-form-item input {
